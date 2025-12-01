@@ -1,10 +1,10 @@
 {
   "SRO Sleep": {
-    "product_name": "SRO Sleep",
-    "file_description": "SRO Sleep - Alerts on emergency!",
-    "file_version": "1.1.0.0",
-    "product_version": "1.1.0.0",
-    "company_name": "Evolex",
+    "product-name": "SRO Sleep",
+    "file-description": "SRO Sleep - Alerts on emergency!",
+    "file-version": "1.1.0.0",
+    "product-version": "1.1.0.0",
+    "company-name": "Evolex",
     "copyright": "© Evolex 2025",
     "trademarks": "SRO Sleep is a trademark of Evolex.",
     "app_directory": "https://github.com/0xEvolex/evolex-repo/tree/main/sro-sleep",
