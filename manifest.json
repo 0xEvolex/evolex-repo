@@ -1,14 +1,14 @@
 {
   "SRO Sleep": {
-    "product-name": "SRO Sleep",
-    "file-description": "SRO Sleep - background automation for SRO",
-    "file-version": "1.1.0.0",
-    "product-version": "1.1.0.0",
-    "company-name": "Evolex",
+    "product_name": "SRO Sleep",
+    "file_description": "SRO Sleep - Alerts on emergency!",
+    "file_version": "1.1.0.0",
+    "product_version": "1.1.0.0",
+    "company_name": "Evolex",
     "copyright": "© Evolex 2025",
     "trademarks": "SRO Sleep is a trademark of Evolex.",
     "app_directory": "https://github.com/0xEvolex/evolex-repo/tree/main/sro-sleep",
     "app_download": "https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sro-sleep/SRO Sleep.exe",
-    "notes": "Packed distribution available as SRO-Sleep.zip in the repository root."
+    "notes": "Will alert you in case of an emergency situation while you are sleeping for example."
   }
 }
