@@ -10,5 +10,17 @@
     "app_directory": "https://github.com/0xEvolex/evolex-repo/tree/main/sro-sleep",
     "app_download": "https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sro-sleep/SRO%20Sleep.exe",
     "notes": "Will alert you in case of an emergency situation while you are sleeping for example."
-  }
+  },
+  "Sailor Fixer": {
+    "product-name": "Sailor Fixer",
+    "file-description": "Sailor Fixer - Fix common Windows issues!",
+    "file-version": "1.0.0.0",
+    "product-version": "1.0.0.0",
+    "company-name": "Evolex & Luminescence",
+    "copyright": "© Evolex & Luminescence 2025",
+    "trademarks": "Sailor Fixer is a trademark of Evolex & Luminescence.",
+    "app_directory": "https://github.com/0xEvolex/evolex-repo/tree/main/sailor-fixer",
+    "app_download": "https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sailor-fixer/Sailor%20Fixer.exe",
+    "notes": "Will help you fix common issues with the Sailor Online game client."
+  }    
 }
