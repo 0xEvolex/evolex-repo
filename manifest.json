@@ -22,5 +22,17 @@
     "app_directory": "https://github.com/0xEvolex/evolex-repo/tree/main/sailor-fixer",
     "app_download": "https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sailor-fixer/Sailor%20Fixer.exe",
     "notes": "Will help you fix common issues with the Sailor Online game client."
-  }    
+  },
+  "Sailor Events": {
+    "product-name": "Sailor Events",
+    "file-description": "Sailor Events - Stay updated with Sailor Online events!",
+    "file-version": "2.0.0.0",
+    "product-version": "2.0.0.0",
+    "company-name": "Evolex",
+    "copyright": "© Evolex 2025",
+    "trademarks": "Sailor Events is a trademark of Evolex.",
+    "app_directory": "https://github.com/0xEvolex/evolex-repo/tree/main/sailor-events",
+    "app_download": "https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sailor-events/Sailor%20Events.exe",
+    "notes": "Will keep you informed about the latest events in Sailor Online."
+  }
 }
