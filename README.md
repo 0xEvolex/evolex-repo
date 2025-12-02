@@ -12,8 +12,11 @@ Note: Binary release only — ignore the "Source code" downloads that GitHub add
 
 ## Projects
 - Sailor Events
+- Sailor Fixer
 - Sailor Hide
-- Sailor Sleep
+- SRO Sleep
+
+
 
 ## License
 This repository is licensed under Creative Commons BY-NC-ND 4.0.
