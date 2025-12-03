@@ -1,12 +1,28 @@
 <#
 .SYNOPSIS
-Generates a release note markdown from a manifest (new schema) and template.
+Generates a release note markdown from manifest.json and template.
+
+QUICK GUIDE:
+1. Update manifest.json with the new version number (file-version or product-version)
+2. Build your .exe and place it in the project directory (e.g., sailor-events/Sailor Events.exe)
+3. Run: .\.repo\generate-release.ps1 -ProjectId "Sailor Events"
+   - This generates the release notes in .repo/releases/<project-slug>/<tag>.md
+4. Review the generated markdown file
+5. To publish to GitHub: .\.repo\generate-release.ps1 -ProjectId "Sailor Events" -Publish
+   - Creates git tag (e.g., sailor-events-v2.0.0.0)
+   - Creates GitHub release
+   - Uploads .exe files from project directory
+
+Optional flags:
+  -DryRun    : Show what would happen without executing
+  -Latest    : Also create/update a <project-slug>-latest tag with stable download URL
+  -SeriesTag : Create/update a <project-slug> tag for filtering all releases
 
 .PARAMETER ProjectId
-The project id from local/release-manifest.json (e.g., 'sailor-events').
+The project name from manifest.json (e.g., 'Sailor Events').
 
 .PARAMETER Output
-Optional output path for the generated markdown. Defaults to local/releases/<project-id>/<tag>.md
+Optional output path for the generated markdown. Defaults to .repo/releases/<project-slug>/<tag>.md
 
 .PARAMETER Publish
 If provided, also creates/updates a GitHub Release for the computed tag and uploads assets.
@@ -15,7 +31,8 @@ If provided, also creates/updates a GitHub Release for the computed tag and uplo
 Simulate publish actions (print commands) without executing them.
 
 .EXAMPLE
-./local/generate-release.ps1 -ProjectId sailor-events
+.\.repo\generate-release.ps1 -ProjectId "Sailor Events"
+.\.repo\generate-release.ps1 -ProjectId "SRO Sleep" -Publish -Latest
 #>
 [CmdletBinding()]
 param(
@@ -34,80 +51,76 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $root = Split-Path -Parent $PSCommandPath | Split-Path -Parent
-# Resolve manifest: prefer local/release-manifest.json, fallback to repo-root release-manifest.json
-$localManifest = Join-Path $root 'local/release-manifest.json'
-$rootManifest  = Join-Path $root 'release-manifest.json'
-if (Test-Path $localManifest) {
-    $manifestPath = $localManifest
-} elseif (Test-Path $rootManifest) {
-    $manifestPath = $rootManifest
-} else {
-    throw "Manifest not found (looked for: $localManifest, $rootManifest)"
+
+# Read manifest.json from repo root
+$manifestPath = Join-Path $root 'manifest.json'
+if (-not (Test-Path $manifestPath)) {
+    throw "Manifest not found at: $manifestPath"
 }
 
 $manifest = Get-Content $manifestPath -Raw | ConvertFrom-Json
 
-# New schema only
-if (-not $manifest.repo -or -not $manifest.repo.owner -or -not $manifest.repo.name -or -not $manifest.repo.defaultBranch) {
-    throw "Manifest is missing repo settings (repo.owner, repo.name, repo.defaultBranch)."
-}
-$repoOwner = $manifest.repo.owner
-$repoName = $manifest.repo.name
-$defaultBranch = $manifest.repo.defaultBranch
-
-$project = $manifest.projects | Where-Object { $_.id -eq $ProjectId }
+# Get project from manifest (keyed by project name)
+$project = $manifest.$ProjectId
 if (-not $project) { throw "Project '$ProjectId' not found in manifest." }
 
-# Resolve version: prefer explicit manifest version, then versionFile in project dir
-$projectDir = $project.projectDir
-if (-not $projectDir) { throw "Project '$ProjectId' is missing 'projectDir' in manifest." }
+# Get repo info from git
+$repoOwner = $null
+$repoName = $null
+$defaultBranch = 'main'
 
-$version = $null
-if ($project.PSObject.Properties.Name -contains 'version' -and $project.version) {
-    $version = [string]$project.version
-} else {
-    $versionFileName = $project.versionFile
-    if ($versionFileName) {
-        $versionFile = Join-Path (Join-Path $root $projectDir) $versionFileName
-        if (Test-Path $versionFile) {
-            $version = (Get-Content $versionFile -Raw).Trim()
-        }
+try {
+    $remoteUrl = (git remote get-url origin 2>$null).Trim()
+    if ($remoteUrl -match 'github\.com[:/]([^/]+)/([^/\.]+)') {
+        $repoOwner = $matches[1]
+        $repoName = $matches[2]
     }
+    $defaultBranch = (git symbolic-ref refs/remotes/origin/HEAD 2>$null).Trim() -replace '^refs/remotes/origin/', ''
+    if (-not $defaultBranch) { $defaultBranch = 'main' }
+} catch {
+    Write-Warning "Could not detect git repo info. Using defaults."
+}
+
+# Auto-derive project slug from project name (e.g., "Sailor Events" -> "sailor-events")
+$projectSlug = $ProjectId.ToLower() -replace '\s+', '-'
+$projectDir = $projectSlug
+
+# Get version from manifest
+$version = $null
+if ($project.PSObject.Properties.Name -contains 'file-version' -and $project.'file-version') {
+    $version = [string]$project.'file-version'
+} elseif ($project.PSObject.Properties.Name -contains 'product-version' -and $project.'product-version') {
+    $version = [string]$project.'product-version'
 }
 if (-not $version) {
-    $hint = 'Set "version" in the manifest for this project or add a version.txt in the project directory.'
-    throw "Version is not defined for project '$ProjectId'. $hint"
+    throw "Version not found in manifest for project '$ProjectId'. Add 'file-version' or 'product-version' field."
 }
 
-# Construct tag and image URL (raw path in repo)
-if (-not $project.tagFormat) { throw "Project '$ProjectId' is missing 'tagFormat' in manifest." }
-$tag = $project.tagFormat.Replace('{version}', $version)
+# Auto-generate tag (format: <project-slug>-v<version>)
+$tag = "$projectSlug-v$version"
 
-# Prefer GitHub raw URL format for images displayed in release notes
-$imageRelPath = $null
-if ($project.heroImage -and $project.heroImage.repoPath) { $imageRelPath = $project.heroImage.repoPath }
-if (-not $imageRelPath) { throw "Project '$ProjectId' is missing heroImage.repoPath in manifest." }
+# Auto-generate image URL
+$imageRelPath = ".repo/resources/$projectSlug/card.png"
 $imageUrl = "https://raw.githubusercontent.com/$repoOwner/$repoName/$defaultBranch/$imageRelPath"
 
-# Template: use path specified in manifest.template.releaseNotes or default to local/release-template.md
-$templatePath = $null
-if ($manifest.template -and $manifest.template.releaseNotes) {
-    $templatePath = Join-Path $root $manifest.template.releaseNotes
-} else {
-    $templatePath = Join-Path $root 'local/release-template.md'
-}
+# Load template
+$templatePath = Join-Path $root '.repo/release-template.md'
 if (-not (Test-Path $templatePath)) { throw "Template not found: $templatePath" }
 $template = Get-Content $templatePath -Raw
 
 $releaseDate = (Get-Date).ToString('yyyy-MM-dd')
-# Determine project display name with fallbacks
-if ($project.PSObject.Properties.Name -contains 'displayName' -and $project.displayName) {
-    $projectName = [string]$project.displayName
-} elseif ($project.PSObject.Properties.Name -contains 'name' -and $project.name) {
-    $projectName = [string]$project.name
+
+# Get project display name
+$projectName = if ($project.PSObject.Properties.Name -contains 'product-name' -and $project.'product-name') {
+    [string]$project.'product-name'
 } else {
-    $projectName = [string]$project.id
+    $ProjectId
 }
+
+# Extract additional fields from manifest
+$notes = if ($project.PSObject.Properties.Name -contains 'notes' -and $project.notes) { [string]$project.notes } else { 'The author has not provided specific release notes for this version.' }
+$companyName = if ($project.PSObject.Properties.Name -contains 'company-name' -and $project.'company-name') { [string]$project.'company-name' } else { '' }
+$copyright = if ($project.PSObject.Properties.Name -contains 'copyright' -and $project.copyright) { [string]$project.copyright } else { '' }
 
 # Simple variable replacement (literal string replace)
 $content = $template
@@ -117,38 +130,21 @@ $replacements = @{
     '{{tag}}'         = $tag
     '{{imageUrl}}'    = $imageUrl
     '{{releaseDate}}' = $releaseDate
-}
- 
-# Compute asset extension label(s) for template (e.g., ".zip" or ".exe", or " .zip, .7z, or .rar")
-$assetExtLabel = 'file'
-if ($project.assets -and $project.assets.extensions) {
-    $exts = @()
-    foreach ($ext in $project.assets.extensions) {
-        if ([string]::IsNullOrWhiteSpace($ext)) { continue }
-        $e = [string]$ext
-        $e = $e.Trim()
-        if (-not $e.StartsWith('.')) { $e = '.' + $e }
-        $exts += $e
-    }
-    if ($exts.Count -eq 1) {
-        $assetExtLabel = $exts[0]
-    } elseif ($exts.Count -eq 2) {
-        $assetExtLabel = ("{0} or {1}" -f $exts[0], $exts[1])
-    } elseif ($exts.Count -gt 2) {
-        $assetExtLabel = ((($exts[0..($exts.Count-2)]) -join ', ') + ", or " + $exts[-1])
-    }
+    '{{notes}}'       = $notes
+    '{{companyName}}' = $companyName
+    '{{copyright}}'   = $copyright
 }
 
+# Default asset extension is .exe
+$assetExtLabel = '.exe'
 $replacements['{{assetExt}}'] = $assetExtLabel
 foreach ($key in $replacements.Keys) {
     $content = $content.Replace($key, [string]$replacements[$key])
 }
 
-# Output path
+# Output path: .repo/releases/<project-slug>/<tag>.md
 if (-not $Output) {
-    $draftsDir = if ($manifest.output -and $manifest.output.draftsDir) { $manifest.output.draftsDir } else { 'local/releases' }
-    $draftsBase = Join-Path $root $draftsDir
-    $Output = Join-Path (Join-Path $draftsBase $project.id) ("$tag.md")
+    $Output = Join-Path $root ".repo/releases/$projectSlug/$tag.md"
 }
 
 New-Item -ItemType Directory -Force -Path (Split-Path -Parent $Output) | Out-Null
@@ -241,8 +237,8 @@ if ($Publish) {
     if ($forcePush) { Run-Cmd $gitExe 'push' '--force' 'origin' $tag } else { Run-Cmd $gitExe 'push' 'origin' $tag }
 
     # Optionally move/update a moving series tag (e.g., 'sailor-events') for easy filtering
-    if ($SeriesTag -and $project.PSObject.Properties.Name -contains 'seriesTag' -and $project.seriesTag) {
-        $series = [string]$project.seriesTag
+    if ($SeriesTag) {
+        $series = $projectSlug
         if (-not $DryRun) {
             $existingSeries = (& $gitExe tag --list $series) | Where-Object { $_ -eq $series }
             if (-not $existingSeries) {
@@ -262,32 +258,21 @@ if ($Publish) {
            Run-Cmd $ghExe 'release' 'create' $tag '--title' $title '--notes-file' $Output
     }
 
-    # Gather assets based on manifest extensions
+    # Gather .exe files from project directory
     $assetFiles = @()
-    if ($project.assets -and $project.assets.extensions) {
-        foreach ($ext in $project.assets.extensions) {
-            if ([string]::IsNullOrWhiteSpace($ext)) { continue }
-            $pattern = if ($ext.StartsWith('.')) { "*" + $ext } else { "*." + $ext }
-            $found = Get-ChildItem -Path (Join-Path $root $projectDir) -Filter $pattern -File -ErrorAction SilentlyContinue
-            if ($found) { $assetFiles += $found.FullName }
-        }
-    }
+    $found = Get-ChildItem -Path (Join-Path $root $projectSlug) -Filter "*.exe" -File -ErrorAction SilentlyContinue
+    if ($found) { $assetFiles += $found.FullName }
 
     if ($assetFiles.Count -gt 0) {
         Write-Host ("Uploading assets (" + ($assetFiles -join ', ') + ")")
         Run-Cmd $ghExe 'release' 'upload' $tag @assetFiles '--clobber'
     } else {
-        Write-Warning "No assets found in '$projectDir' matching configured extensions. Skipping upload."
+        Write-Warning "No .exe files found in '$projectSlug'. Skipping upload."
     }
 
     # Optionally move/update a per-app latest tag and create/update a matching release with stable asset name
     if ($Latest) {
-        $latestTagName = $null
-        if ($project.PSObject.Properties.Name -contains 'latestTag' -and $project.latestTag) {
-            $latestTagName = [string]$project.latestTag
-        } else {
-            $latestTagName = [string]("{0}-latest" -f $project.id)
-        }
+        $latestTagName = "$projectSlug-latest"
 
         # Create or force-update the lightweight tag locally
         if (-not $DryRun) {
@@ -302,7 +287,7 @@ if ($Publish) {
         }
         Run-Cmd $gitExe 'push' '--force' 'origin' $latestTagName
 
-        # Ensure a GitHub Release exists for the latest tag (so assets have a stable URL)
+        # Ensure a GitHub Release exists for the latest tag (so resources have a stable URL)
         $latestReleaseExists = $false
         if (-not $DryRun) {
             try { & $ghExe release view $latestTagName | Out-Null; if ($LASTEXITCODE -eq 0) { $latestReleaseExists = $true } } catch { $latestReleaseExists = $false }
@@ -315,21 +300,14 @@ if ($Publish) {
             Run-Cmd $ghExe 'release' 'create' $latestTagName '--title' $latestTitle '--notes-file' $Output
         }
 
-        # Upload assets to the latest release with a stable name when possible
+        # Upload assets to the latest release with a stable name
         if ($assetFiles.Count -gt 0) {
-            # Determine stable asset name default: <project.id><ext> for single-asset case
             $assetArgs = @()
             if ($assetFiles.Count -eq 1) {
                 $ext = [System.IO.Path]::GetExtension($assetFiles[0])
-                $stableName = $null
-                if ($project.assets -and $project.assets.PSObject.Properties.Name -contains 'stableName' -and $project.assets.stableName) {
-                    $stableName = [string]$project.assets.stableName
-                } else {
-                    $stableName = [string]("{0}{1}" -f $project.id, $ext)
-                }
+                $stableName = "$projectSlug$ext"
                 $assetArgs += ("{0}#{1}" -f $assetFiles[0], $stableName)
             } else {
-                # Multiple assets: upload with original names unless stable names are explicitly configured per file (not supported here)
                 $assetArgs += $assetFiles
             }
             Run-Cmd $ghExe 'release' 'upload' $latestTagName @assetArgs '--clobber'
