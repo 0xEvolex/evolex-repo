@@ -1,5 +1,5 @@
 {
-    "serverTimezone": "Etc/GMT-3",
+    "serverTimezone": "Etc/GMT-2",
     "serverDelay": 0,
     "serverName": "Sailor Online - Arabian Dawn",
     "serverEvents": {
