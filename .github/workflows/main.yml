@@ -1,0 +1,65 @@
+name: Discord Push Notification
+
+on:
+  push:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Discord Embed
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const webhookUrl = process.env.DISCORD_WEBHOOK;
+            const actor = process.env.GITHUB_ACTOR;
+            const repo = process.env.GITHUB_REPOSITORY;
+            const branch = process.env.GITHUB_REF_NAME;
+            const commitSha = process.env.GITHUB_SHA.substring(0,7);
+            const commitMsg = JSON.stringify(process.env.GITHUB_EVENT_HEAD_COMMIT_MESSAGE).slice(1,-1); 
+            // JSON.stringify + slice removes dangerous quotes/newlines
+            const commitUrl = process.env.GITHUB_EVENT_HEAD_COMMIT_URL;
+            const actorAvatar = `https://github.com/${actor}.png?size=128`;
+            const payload = {
+              embeds: [
+                {
+                  title: `Push to ${branch}`,
+                  url: commitUrl,
+                  description: `**${actor}** pushed commit [\`${commitSha}\`](${commitUrl})\n\n${commitMsg}`,
+                  color: 0x00ff00,
+                  author: {
+                    name: actor,
+                    icon_url: actorAvatar,
+                    url: `https://github.com/${actor}`
+                  },
+                  fields: [
+                    {
+                      name: "Repository",
+                      value: `[${repo}](https://github.com/${repo})`,
+                      inline: true
+                    },
+                    {
+                      name: "Branch",
+                      value: branch,
+                      inline: true
+                    }
+                  ],
+                  thumbnail: { url: actorAvatar },
+                  footer: { text: "GitHub Push Notification" },
+                  timestamp: new Date().toISOString()
+                }
+              ]
+            };
+            await fetch(webhookUrl, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload)
+            });
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_REF_NAME: ${{ github.ref_name }}
+          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_EVENT_HEAD_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+          GITHUB_EVENT_HEAD_COMMIT_URL: ${{ github.event.head_commit.url }}
