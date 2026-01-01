@@ -11,6 +11,18 @@
     "app_download": "https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sro-sleep/SRO%20Sleep.exe",
     "notes": "Will alert you in case of an emergency situation while you are sleeping for example."
   },
+  "SRO Companion": {
+    "product-name": "SRO Companion",
+    "file-description": "SRO Companion - Game Enhancement System",
+    "file-version": "1.0.0.0",
+    "product-version": "1.0.0.0",
+    "company-name": "Evolex",
+    "copyright": "© Evolex 2025",
+    "trademarks": "SRO Companion is a trademark of Evolex.",
+    "app_directory": "https://github.com/0xEvolex/evolex-repo/tree/main/sro-companion",
+    "app_download": "https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sro-companion/SRO%20Companion.exe",
+    "notes": "Will help you enhance your Silkroad Online game experience."
+  },
   "Sailor Fixer": {
     "product-name": "Sailor Fixer",
     "file-description": "Sailor Fixer - Fix common Windows issues!",
