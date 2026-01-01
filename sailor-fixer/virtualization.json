@@ -51,13 +51,15 @@
         "vmware-vmx.exe",
         "vmware-hostd.exe",
         "docker.exe",
-        "dockerd.exe"
+        "dockerd.exe",
+        "vmnat.exe"
     ],
     "vm_tools_processes": [
         "vmtoolsd.exe",
         "vmwaretray.exe",
         "vmwareuser.exe",
         "vmacthlp.exe",
+        "vmnat.exe",
         "vmwarehostopen.exe",
         "vboxservice.exe",
         "vboxtray.exe",
