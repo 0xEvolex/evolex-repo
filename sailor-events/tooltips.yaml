@@ -1,6 +1,7 @@
 Roc: |-
   Description:
-  Roc is a weekly unique boss event. Defeat Roc and its stronger form, Deathbone, for valuable drops.
+  Roc is a weekly unique boss event located in Roc Mountain.
+  Defeat Roc and its stronger form, Deathbone, for valuable drops.
 
   Rewards:
   Roc Drops:
@@ -12,28 +13,29 @@ Roc: |-
   Direct to inventory: 3x Wheel of Fates, 150 Sailor Points.
 
   Deathbone Drops:
-  1x 13th Degree Special Awaken Stone Weapon.
-  1x 13th Degree Special Awaken Stone Shield.
+  2x 14th Degree Magic items.
+  3x 13th Degree Legend items.
+  4x 13th Degree Rare items.
+  1x tradeable 13th Degree Special Awaken Stone Weapon
+  1x tradeable 13th Degree Special Awaken Stone Shield
   20x random Wheel items.
   16x Gold Piles.
   Trigger, Dodging & Hit Scrolls.
   10x Magic POP Cards.
   6x Premium Magic POP Cards.
-  3x 12th Degree Magic Equipment.
-  1x 12th Degree Rare Equipment.
-  1x 12th Degree Legend Equipment.
-  2x 13th Degree Magic Equipment.
+  3x Random Exclusive 2017 Demon Shaitan Avatar parts.
   3x Random Exclusive 2017 Demon Shaitan Avatar parts.
   Direct to inventory: 3x Wheel of Fates, 150 Sailor Points.
 
   Requirements:
-  PLACEHOLDER
+  Move to Gate of Ruler in Roc Mountain and purchase a key to enter its lair.
+  Gate of Ruler is only open for a short period so be swift to enter.
 Medusa: |-
   Description:
   Medusa is a unique boss that spawns periodically. Defeat her for rare Egyptian equipment and alchemy materials.
 
   Rewards:
-  1x 13th Degree Special Awaken Stone.
+  1x tradeable 13th Degree Special Awaken Stone.
   8x Gold Piles.
   50% chance to drop 1x random Rare Egyptian A-type equipment.
   10x Magic POP Cards.
@@ -43,6 +45,7 @@ Medusa: |-
 
   Requirements:
   Enter the Gate of Sarin Tribe and defeat all her guardians to spawn Medusa.
+  Gate of Sarin Tribe is only open for a short period so be swift to enter.
 Moon Gem: |-
   Description:
   Every hour Event So-Ok NPC will give Moon Pots for 10 minutes (xx:50 till xx:00).
@@ -78,8 +81,8 @@ Clash of the Gods: |-
   At 2 minutes left: 40 Mummy monsters spawn in the losing team's zone.
 
   Rewards:
-  WIN: 10x Platinum Coins & 7x Coins of Courage.
-  DEFEAT/DRAW: 6x Platinum Coins & 4x Coins of Courage.
+  WIN: 10x Diamond Coins & 7x Coins of Courage.
+  DEFEAT/DRAW: 6x Diamond Coins & 4x Coins of Courage.
   Unique drops (killer party members): 1x Wheel of Fate, 10 Silver Silks.
   All Mummy monsters: 15% chance to drop Wheel of Fate.
 
@@ -92,27 +95,25 @@ Poison Temple: |-
   Use Tunnel of Abyss teleporters to enter (entrance is allowed only when uniques spawn).
 
   Rewards:
-  Shabahoon of Lamp Drops:
-  1x 13th Degree Magic Proof Stone.
-  50% Chance to drop 1x 13th Degree Rare Proof Stone.
-  25% Chance to drop 1x 13th Degree Legend Proof Stone.
+  Each unique drops:
+  Chance to drop 14th Degree Magic Proof Stone.
   5x random Wheel items.
   6x Gold Piles.
   4x Magic POP Cards.
   3x Premium Magic POP Cards.
-  Chance to drop 13th Degree Magic Equipment.
-  30% Chance to drop tradeable 13th Degree Special Awaken Stone.
+  Chance to drop 14th Degree Magic Equipment.
+  Direct to inventory: 5x Diamond Coins, 50 Sailor Points.
 
   Requirements:
-  Must be a trader or thief (job-only area).
+  Must be wearing a job suit. Trader, hunter or thief (job-only area).
 Sailors Clash: |-
   Description:
   A team-based PvP arena event. Loot boxes spawn at set intervals during the match.
   Box Spawn Times: 09:30 (right at start), 06:20, 03:10.
 
   Rewards:
-  WIN: 10x Platinum Coins & 7x Coins of Courage.
-  DEFEAT/DRAW: 6x Platinum Coins & 4x Coins of Courage.
+  WIN: 10x Diamond Coins & 7x Coins of Courage.
+  DEFEAT/DRAW: 6x Diamond Coins & 4x Coins of Courage.
 
   Requirements:
   1.850+ Item Points are required to register at the Arena Manager NPC.
@@ -121,8 +122,8 @@ Unique Clash: |-
   A team-based PvP arena event with unique monsters.
 
   Rewards:
-  WIN: 10x Platinum Coins & 7x Coins of Courage.
-  DEFEAT/DRAW: 6x Platinum Coins & 4x Coins of Courage.
+  WIN: 10x Diamond Coins & 7x Coins of Courage.
+  DEFEAT/DRAW: 6x Diamond Coins & 4x Coins of Courage.
 
   Requirements:
   1.850+ Item Points are required to register at the Arena Manager NPC.
@@ -132,8 +133,8 @@ Styria Clash: |-
   Box Spawn Times: 09:30 (right at start), 06:20, 03:10.
 
   Rewards:
-  WIN: 12x Platinum Coins & 7x Coins of Courage.
-  DEFEAT/DRAW: 7x Platinum Coins & 4x Coins of Courage.
+  WIN: 12x Diamond Coins & 7x Coins of Courage.
+  DEFEAT/DRAW: 7x Diamond Coins & 4x Coins of Courage.
 
   Requirements:
   1.850+ Item Points and an equipped Job Suit required to register at the Arena Manager NPC.
@@ -142,9 +143,9 @@ Carnage Arena: |-
   A free-for-all PvP arena event. Earn bonus rewards for each kill.
 
   Rewards:
-  WIN: 10x Platinum Coins & 2x Coins of Courage.
+  WIN: 10x Diamond Coins & 2x Coins of Courage.
   KILL: 1x Coin of Courage (MAX 5).
-  DEFEAT/DRAW: 7x Platinum Coins & 1x Coin of Courage.
+  DEFEAT/DRAW: 7x Diamond Coins & 1x Coin of Courage.
 
   Requirements:
   1.750+ Item Points are required to register at the Arena Manager NPC.
@@ -154,8 +155,8 @@ Carnage Party: |-
   Each team consists of 2x CH and 2x EU players.
 
   Rewards:
-  WIN: 12x Platinum Coins & 10x Coins of Courage.
-  DEFEAT/DRAW: 8x Platinum Coins & 7x Coins of Courage.
+  WIN: 12x Diamond Coins & 10x Coins of Courage.
+  DEFEAT/DRAW: 8x Diamond Coins & 7x Coins of Courage.
 
   Requirements:
   1.750+ Item Points are required to register at the Arena Manager NPC.
@@ -166,8 +167,8 @@ Ghost Hunt: |-
   Buy Talismans of Exorcism from the Grocery Shop - you'll use these to kill mobs in the event.
 
   Rewards:
-  WIN: 8x Platinum Coins & 6x Coins of Courage.
-  DEFEAT/DRAW: 5x Platinum Coins & 3x Coins of Courage.
+  WIN: 8x Diamond Coins & 6x Coins of Courage.
+  DEFEAT/DRAW: 5x Diamond Coins & 3x Coins of Courage.
 
   Requirements:
   No movement speed buffs active when the event starts.
@@ -177,8 +178,8 @@ BA Random: |-
   Battle Arena with random team assignment.
 
   Rewards:
-  WIN: 8x Platinum Coins & 6x Coins of Courage.
-  DEFEAT/DRAW: 5x Platinum Coins & 3x Coins of Courage.
+  WIN: 8x Diamond Coins & 6x Coins of Courage.
+  DEFEAT/DRAW: 5x Diamond Coins & 3x Coins of Courage.
 
   Requirements:
   1.750+ Item Points are required to register at the Arena Manager NPC.
@@ -187,8 +188,8 @@ BA Party: |-
   Battle Arena where you enter with your own party.
 
   Rewards:
-  WIN: 8x Platinum Coins & 6x Coins of Courage.
-  DEFEAT/DRAW: 5x Platinum Coins & 3x Coins of Courage.
+  WIN: 8x Diamond Coins & 6x Coins of Courage.
+  DEFEAT/DRAW: 5x Diamond Coins & 3x Coins of Courage.
 
   Requirements:
   1.750+ Item Points are required to register at the Arena Manager NPC.
@@ -197,8 +198,8 @@ BA Guild: |-
   Battle Arena where you enter with your guild.
 
   Rewards:
-  WIN: 8x Platinum Coins & 6x Coins of Courage.
-  DEFEAT/DRAW: 5x Platinum Coins & 3x Coins of Courage.
+  WIN: 8x Diamond Coins & 6x Coins of Courage.
+  DEFEAT/DRAW: 5x Diamond Coins & 3x Coins of Courage.
 
   Requirements:
   1.950+ Item Points are required to enter.
@@ -208,8 +209,8 @@ BA Flag: |-
   Battle Arena capture-the-flag mode.
 
   Rewards:
-  WIN: 8x Platinum Coins & 6x Coins of Courage.
-  DEFEAT/DRAW: 5x Platinum Coins & 3x Coins of Courage.
+  WIN: 8x Diamond Coins & 6x Coins of Courage.
+  DEFEAT/DRAW: 5x Diamond Coins & 3x Coins of Courage.
 
   Requirements:
   1.750+ Item Points are required to register at the Arena Manager NPC.
@@ -218,8 +219,8 @@ BA Job: |-
   Battle Arena job-themed mode.
 
   Rewards:
-  WIN: 8x Platinum Coins & 6x Coins of Courage.
-  DEFEAT/DRAW: 5x Platinum Coins & 3x Coins of Courage.
+  WIN: 8x Diamond Coins & 6x Coins of Courage.
+  DEFEAT/DRAW: 5x Diamond Coins & 3x Coins of Courage.
 
   Requirements:
   1.850+ Item Points are required to enter.
@@ -229,9 +230,9 @@ SA Solo: |-
   This limit transfers to the next season.
 
   Rewards:
-  WIN: 2x Platinum Coins & 6x Coins of Combativeness.
-  KILL: 1x Platinum Coin.
-  DEFEAT/DRAW: 1x Platinum Coin & 3x Coins of Combativeness.
+  WIN: 2x Diamond Coins & 6x Coins of Combativeness.
+  KILL: 1x Diamond Coin.
+  DEFEAT/DRAW: 1x Diamond Coin & 3x Coins of Combativeness.
 
   Requirements:
   1.850+ Item Points are required to enter.
@@ -241,84 +242,76 @@ SA Party: |-
   This limit does NOT transfer to the next season!
 
   Rewards:
-  WIN: 4x Platinum Coins & 6x Coins of Combativeness.
-  DEFEAT/DRAW: 2x Platinum Coins & 3x Coins of Combativeness.
+  WIN: 4x Diamond Coins & 6x Coins of Combativeness.
+  DEFEAT/DRAW: 2x Diamond Coins & 3x Coins of Combativeness.
 
   Requirements:
   1.850+ Item Points are required to enter.
 Anubis & Isis: |-
   Description:
-  A job temple unique boss encounter located at Abyss Tunnel in Taklamakan.
+  A job temple unique boss encounter.
+  Job Temple entrance is located at Salt Post in Alexandria.
 
   Rewards:
-  15% drop chance for 1x 13th Degree Special Awaken Stone.
-  1x 13th Degree Magic Proof Stone.
-  50% Chance to drop 1x 13th Degree Rare Proof Stone.
+  Chance to drop 14th Degree Magic Proof Stone.
   5x random Wheel items.
   6x Gold Piles.
   4x Magic POP Cards.
   3x Premium Magic POP Cards.
-  Chance to drop 13th Degree Magic Equipment.
-  Direct to inventory: 5x Platinum Coins, 50 Sailor Points.
+  Chance to drop 14th Degree Magic Equipment.
+  Direct to inventory: 5x Diamond Coins, 50 Sailor Points.
 
   Requirements:
-  Job Temple entrance is located at Salt Post in Alexandria.
+  A job suite is required to enter the Job Temple.
 Selket & Neith: |-
   Description:
-  A job temple unique boss encounter located at Abyss Tunnel in Taklamakan.
+  A job temple unique boss encounter.
+  Job Temple entrance is located at Salt Post in Alexandria.
 
   Rewards:
-  15% drop chance for 1x 13th Degree Special Awaken Stone.
-  1x 13th Degree Magic Proof Stone.
-  50% Chance to drop 1x 13th Degree Rare Proof Stone.
+  Chance to drop 14th Degree Magic Proof Stone.
   5x random Wheel items.
   6x Gold Piles.
   4x Magic POP Cards.
   3x Premium Magic POP Cards.
-  Chance to drop 13th Degree Magic Equipment.
-  Direct to inventory: 5x Platinum Coins, 50 Sailor Points.
+  Chance to drop 14th Degree Magic Equipment.
+  Direct to inventory: 5x Diamond Coins, 50 Sailor Points.
 
   Requirements:
-  Job Temple entrance is located at Salt Post in Alexandria.
+  A job suite is required to enter the Job Temple.
 Haroeris & Seth: |-
   Description:
-  A job temple encounter with three shadow uniques of increasing difficulty located at Abyss Tunnel in Taklamakan.
+  A job temple encounter with three shadow uniques of increasing difficulty.
+  Job Temple entrance is located at Salt Post in Alexandria.
 
   Rewards:
   Shadow Eris Drops:
-  5% drop chance for 1x 13th Degree Special Awaken Stone.
-  1x 13th Degree Magic Proof Stone.
-  50% Chance to drop 1x 13th Degree Rare Proof Stone.
+  Chance to drop 14th Degree Magic Proof Stone.
   3x random Wheel items.
   6x Gold Piles.
   4x Magic POP Cards.
   3x Premium Magic POP Cards.
-  Chance to drop 13th Degree Magic Equipment.
-  Direct to inventory: 3x Platinum Coins, 30 Sailor Points.
+  Chance to drop 14th Degree Magic Equipment.
+  Direct to inventory: 3x Diamond Coins, 30 Sailor Points.
 
   Shadow Haroeris Drops:
-  15% drop chance for 1x 13th Degree Special Awaken Stone.
-  1x 13th Degree Magic Proof Stone.
-  50% Chance to drop 1x 13th Degree Rare Proof Stone.
+  Chance to drop 14th Degree Magic Proof Stone.
   6x random Wheel items.
   7x Gold Piles.
-  4x Magic POP Cards.
-  3x Premium Magic POP Cards.
-  Chance to drop 13th Degree Magic Equipment.
-  Direct to inventory: 6x Platinum Coins, 60 Sailor Points.
+  Chance to drop 14th Degree Magic Equipment.
+  Direct to inventory: 6x Diamond Coins, 60 Sailor Points.
 
   Shadow Seth Drops:
-  1x 13th Degree Special Awaken Stone.
-  2x 13th Degree Magic Proof Stone.
-  1% Chance to drop 1x 13th Degree Rare Proof Stone.
+  Chance to drop 14th Degree Magic Proof Stone.
   8x random Wheel items.
   8x Gold Piles.
   4x Magic POP Cards.
   3x Premium Magic POP Cards.
-  Chance to drop 13th Degree Magic Equipment.
+  Chance to drop 14th Degree Magic Equipment.
+  Direct to inventory: 7x Diamond Coins, 70 Sailor Points.
 
   Requirements:
-  Job Temple entrance is located at Salt Post in Alexandria.
+  A job suite is required to enter the Job Temple.
 Fortress War: |-
   Description:
   Weekly guild-vs-guild siege event. Conquer a fortress to earn tax income from associated towns.
