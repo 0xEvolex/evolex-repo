@@ -87,7 +87,7 @@ Clash of the Gods: |-
   All Mummy monsters: 15% chance to drop Wheel of Fate.
 
   Requirements:
-  1850+ Item Points are required to register at the Arena Manager NPC.
+  1900+ Item Points are required to register at the Arena Manager NPC.
 Poison Temple: |-
   Description:
   Poison Temple is a job-only area where three uniques spawn simultaneously.
@@ -116,7 +116,7 @@ Sailors Clash: |-
   DEFEAT/DRAW: 6x Diamond Coins & 4x Coins of Courage.
 
   Requirements:
-  1850+ Item Points are required to register at the Arena Manager NPC.
+  1900+ Item Points are required to register at the Arena Manager NPC.
 Unique Clash: |-
   Description:
   A team-based PvP arena event with unique monsters.
@@ -126,7 +126,7 @@ Unique Clash: |-
   DEFEAT/DRAW: 6x Diamond Coins & 4x Coins of Courage.
 
   Requirements:
-  1850+ Item Points are required to register at the Arena Manager NPC.
+  1900+ Item Points are required to register at the Arena Manager NPC.
 Styria Clash: |-
   Description:
   A job-themed team-based PvP arena event. Loot boxes spawn at set intervals during the match.
@@ -148,7 +148,7 @@ Carnage Arena: |-
   DEFEAT/DRAW: 7x Diamond Coins & 1x Coin of Courage.
 
   Requirements:
-  1750+ Item Points are required to register at the Arena Manager NPC.
+  1900+ Item Points are required to register at the Arena Manager NPC.
 Carnage Party: |-
   Description:
   A team-based PvP arena event. Players are randomly assigned to a team (no party forming beforehand needed).
@@ -159,7 +159,7 @@ Carnage Party: |-
   DEFEAT/DRAW: 8x Diamond Coins & 7x Coins of Courage.
 
   Requirements:
-  2000+ Item Points are required to register at the Arena Manager NPC.
+  2100+ Item Points are required to register at the Arena Manager NPC.
 Ghost Hunt: |-
   Description:
   A cooperative PvE event where players hunt ghost monsters using Talismans of Exorcism.
@@ -173,6 +173,7 @@ Ghost Hunt: |-
   Requirements:
   No movement speed buffs active when the event starts.
   Talismans of Exorcism required (Grocery Shop).
+  1900+ Item Points are required to register at the So Ok NPC.
 BA Random: |-
   Description:
   Battle Arena with random team assignment.
@@ -182,7 +183,7 @@ BA Random: |-
   DEFEAT/DRAW: 5x Diamond Coins & 3x Coins of Courage.
 
   Requirements:
-  1750+ Item Points are required to register at the Arena Manager NPC.
+  No IP requirements as theres IP matchmaking.
 BA Party: |-
   Description:
   Battle Arena where you enter with your own party.
@@ -192,7 +193,7 @@ BA Party: |-
   DEFEAT/DRAW: 5x Diamond Coins & 3x Coins of Courage.
 
   Requirements:
-  1750+ Item Points are required to register at the Arena Manager NPC.
+  No IP requirements as theres IP matchmaking.
 BA Guild: |-
   Description:
   Battle Arena where you enter with your guild.
@@ -213,7 +214,7 @@ BA Flag: |-
   DEFEAT/DRAW: 5x Diamond Coins & 3x Coins of Courage.
 
   Requirements:
-  1750+ Item Points are required to register at the Arena Manager NPC.
+  No IP requirements as theres IP matchmaking.
 BA Job: |-
   Description:
   Battle Arena job-themed mode.
@@ -223,7 +224,7 @@ BA Job: |-
   DEFEAT/DRAW: 5x Diamond Coins & 3x Coins of Courage.
 
   Requirements:
-  1850+ Item Points are required to enter.
+  No IP requirements as theres IP matchmaking.
 SA Solo: |-
   Description:
   Solo Survival Arena. Each Season grants rewards for up to 40 games.
