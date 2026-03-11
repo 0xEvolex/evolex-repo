@@ -79,12 +79,7 @@
         },
         "BA Job": {
             "Dates": {
-                "Monday": ["05:40", "11:40", "17:40"],
-                "Tuesday": ["05:40", "11:40", "17:40"],
-                "Wednesday": ["05:40", "11:40", "17:40"],
-                "Friday": ["05:40", "11:40", "17:40"],
-                "Saturday": ["08:40"],
-                "Sunday": ["08:40"]
+                "Monday": []
             },
             "duration": "00:10",
             "registration_needed": true,
