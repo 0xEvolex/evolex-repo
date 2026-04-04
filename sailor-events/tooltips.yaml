@@ -240,7 +240,7 @@ SA Solo: |-
 SA Party: |-
   Description:
   Party Survival Arena. Each Season grants rewards for up to 40 games.
-  This limit does NOT transfer to the next season!
+  This limit transfers to the next season.
 
   Rewards:
   WIN: 4x Diamond Coins & 6x Coins of Combativeness.
