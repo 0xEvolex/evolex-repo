@@ -1,4 +1,16 @@
 {
+  "SRO Opus": {
+    "product-name": "SRO Opus",
+    "file-description": "SRO Opus - Game Automation!",
+    "file-version": "0.0.0.2",
+    "product-version": "0.0.0.2",
+    "company-name": "Evolex",
+    "copyright": "© Evolex 2025",
+    "trademarks": "SRO Opus is a trademark of Evolex.",
+    "app_directory": "https://github.com/0xEvolex/evolex-repo/tree/main/sro-opus",
+    "app_download": "https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sro-opus/SRO%20Opus.exe",
+    "notes": "Will automate various tasks in Silkroad Online."
+  },
   "SRO Sleep": {
     "product-name": "SRO Sleep",
     "file-description": "SRO Sleep - Alerts on emergency!",
