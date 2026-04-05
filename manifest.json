@@ -70,5 +70,17 @@
     "app_directory": "https://github.com/0xEvolex/evolex-repo/tree/main/sailor-hide",
     "app_download": "https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sailor-hide/Sailor%20Hide.exe",
     "notes": "A tiny app that allows you to minimize the Sailor Online game client to tray bar."
-  }
+  },
+    "Python": {
+    "product-name": "TEST",
+    "file-description": "TEST",
+    "file-version": "9.9.9.9",
+    "product-version": "9.9.9.9",
+    "company-name": "Evolex",
+    "copyright": "© Evolex 2026",
+    "trademarks": "TEST is a trademark of Evolex.",
+    "app_directory": "https://github.com/0xEvolex/evolex-repo/tree/main/test",
+    "app_download": "https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/test/TEST.exe",
+    "notes": "This is a test application for demonstration purposes."
+    }
 }
