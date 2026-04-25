@@ -11,6 +11,18 @@
     "app_download": "https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sro-opus/SRO%20Opus.exe",
     "notes": "Will automate various tasks in Silkroad Online."
   },
+  "SRO Alchemist": {
+    "product-name": "SRO Alchemist",
+    "file-description": "SRO Alchemist - Game Automation!",
+    "file-version": "0.0.0.1",
+    "product-version": "0.0.0.1",
+    "company-name": "Evolex",
+    "copyright": "© Evolex 2026",
+    "trademarks": "SRO Alchemist is a trademark of Evolex.",
+    "app_directory": "https://github.com/0xEvolex/evolex-repo/tree/main/sro-alchemist",
+    "app_download": "https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sro-alchemist/SRO%20Alchemist.exe",
+    "notes": "Will automate various tasks in Silkroad Online."
+  },
   "SRO Sleep": {
     "product-name": "SRO Sleep",
     "file-description": "SRO Sleep - Alerts on emergency!",
