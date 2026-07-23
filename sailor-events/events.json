@@ -1218,7 +1218,7 @@
           "registration_needed": false,
           "pre_registration": "00:00",
           "register_method": "Event So-Ok",
-          "enabled": false,
+          "enabled": true,
           "GUI_Location": {
             "Side": "right",
             "Order": 13
