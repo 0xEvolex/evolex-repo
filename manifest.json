@@ -68,19 +68,7 @@
     "copyright": "© Evolex 2026",
     "trademarks": "SRO Hider is a trademark of Evolex.",
     "app_directory": "https://github.com/0xEvolex/evolex-repo/tree/main/sro-hider",
-    "app_download": "https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sailor-hide/SRO%20Hider.exe",
+    "app_download": "https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sro-hider/SRO%20Hider.exe",
     "notes": "A tiny app that allows you to minimize any Silkroad game client to tray bar."
-  },
-    "Python": {
-    "product-name": "TEST",
-    "file-description": "TEST",
-    "file-version": "0.0.0.1",
-    "product-version": "0.0.0.1",
-    "company-name": "Evolex",
-    "copyright": "© Evolex 2026",
-    "trademarks": "TEST is a trademark of Evolex.",
-    "app_directory": "https://github.com/0xEvolex/evolex-repo/tree/main/test",
-    "app_download": "https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/test/TEST.exe",
-    "notes": "This is a test application for demonstration purposes."
-    }
+  }
 }
