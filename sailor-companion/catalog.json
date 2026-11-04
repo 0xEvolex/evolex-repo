@@ -1,5 +1,12 @@
 {
   "schemaVersion": 1,
+  "app": {
+    "version": "0.2.0",
+    "url": "https://github.com/0xEvolex/evolex-repo/releases/download/companion-v0.2.0/SailorCompanion-Setup-0.2.0.exe",
+    "sha256": "86a2944cd1bf5ff0678b21e3bbd5d5483a2d9172be4fd34ce76b46a9daf84117",
+    "size": 52589669,
+    "notes": "First release of Sailor Companion: one app that installs and updates Sailor Events, SRO Hider, SRO Sleep and Sailor Fixer. SRO Sleep can now keep watching a minimized client."
+  },
   "modules": [
     {
       "id": "events",

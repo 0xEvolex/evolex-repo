@@ -70,5 +70,18 @@
     "app_directory": "https://github.com/0xEvolex/evolex-repo/tree/main/sro-hider",
     "app_download": "https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sro-hider/SRO%20Hider.exe",
     "notes": "A tiny app that allows you to minimize any Silkroad game client to tray bar."
+  },
+  "Sailor Companion": {
+    "product-name": "Sailor Companion",
+    "file-description": "Sailor Companion - Hub for Evolex Silkroad tools",
+    "file-version": "0.2.0.0",
+    "product-version": "0.2.0.0",
+    "company-name": "Evolex",
+    "copyright": "© Evolex 2026",
+    "trademarks": "Sailor Companion is a trademark of Evolex.",
+    "app_directory": "https://github.com/0xEvolex/evolex-repo/releases/tag/companion-v0.2.0",
+    "app_download": "https://github.com/0xEvolex/evolex-repo/releases/latest/download/SailorCompanion-Setup.exe",
+    "sha256": "86a2944cd1bf5ff0678b21e3bbd5d5483a2d9172be4fd34ce76b46a9daf84117",
+    "notes": "Installs and updates Sailor Events, SRO Hider, SRO Sleep and Sailor Fixer from one place."
   }
 }
