@@ -25,9 +25,9 @@ against the SHA-256 listed in the catalog before installing it.
 
 | Module | Version | Package |
 | --- | --- | --- |
-| Sailor Events | 3.0.0 | `events-3.0.0.zip` |
-| SRO Hider | 2.0.0 | `hider-2.0.0.zip` |
-| SRO Sleep | 2.0.0 | `sleep-2.0.0.zip` |
+| Sailor Events | 3.1.0 | `events-3.1.0.zip` |
+| SRO Hider | 2.0.1 | `hider-2.0.1.zip` |
+| SRO Sleep | 2.1.0 | `sleep-2.1.0.zip` |
 | Sailor Fixer | 2.1.0 | `fixer-2.1.0.zip` (the Sailor Fixer release above, unchanged) |
 
 Packages are installed through Sailor Companion; they are not meant to be unpacked by hand.

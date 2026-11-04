@@ -4,12 +4,13 @@
     {
       "id": "events",
       "name": "Sailor Events",
+      "author": "Evolex",
       "description": "Event timers, spoken reminders and an in-game overlay for Arabian Dawn and Pirate Odyssey.",
-      "version": "3.0.0",
-      "url": "events-3.0.0.zip",
-      "sha256": "6e829e8fc8aa9bd204025f26a9f3685dc29f3563455e9a70418182af123585a0",
-      "size": 845292,
-      "minHostVersion": "0.1.0",
+      "version": "3.1.0",
+      "url": "events-3.1.0.zip",
+      "sha256": "d559a901746ad2d0caad105fa204dc48178ef32a07eba80117602115e22b04d5",
+      "size": 845647,
+      "minHostVersion": "0.2.0",
       "requiresAdmin": false,
       "permissions": [
         "Downloads the event schedule",
@@ -21,11 +22,12 @@
     {
       "id": "hider",
       "name": "SRO Hider",
+      "author": "Evolex",
       "description": "Hide and show Silkroad clients without closing them, from Companion, the tray or Ctrl+Alt+H.",
-      "version": "2.0.0",
-      "url": "hider-2.0.0.zip",
-      "sha256": "998230234f5a6cdb946caf46ab5ccae5f85f5166f904f4761c67f3c3c69f3152",
-      "size": 13413,
+      "version": "2.0.1",
+      "url": "hider-2.0.1.zip",
+      "sha256": "d80672677097c189660a1934d399bebfaef80d052210fa8574bd03fb0c2f47ee",
+      "size": 13501,
       "minHostVersion": "0.2.0",
       "requiresAdmin": false,
       "permissions": [
@@ -37,15 +39,17 @@
     {
       "id": "sleep",
       "name": "SRO Sleep",
+      "author": "Evolex",
       "description": "Wakes you with an alarm when the game disconnects, your character dies or the client crashes.",
-      "version": "2.0.0",
-      "url": "sleep-2.0.0.zip",
-      "sha256": "1ba15874a6a279681c8b7182900acc04c5907e36ed4f9a7c0cf69a97eb90e60c",
-      "size": 137251,
+      "version": "2.1.0",
+      "url": "sleep-2.1.0.zip",
+      "sha256": "0b5b1f5dea99030639ae85cf5aadf02fb16d00f4961e354bd90a21015dac4fb0",
+      "size": 141541,
       "minHostVersion": "0.2.0",
       "requiresAdmin": false,
       "permissions": [
         "Looks at the game window every 3 seconds while watching (nothing is saved or sent)",
+        "If you minimize the watched client, keeps it running just off screen until you click it or stop watching",
         "Plays a sound and shows Windows notifications",
         "Can shut the PC down after a crash, only if you turn it on"
       ]
@@ -53,6 +57,7 @@
     {
       "id": "fixer",
       "name": "Sailor Fixer",
+      "author": "Evolex & Luminescence",
       "description": "The Sailor Fixer repair tool. Companion downloads it and starts it in its own window.",
       "version": "2.1.0",
       "url": "fixer-2.1.0.zip",
