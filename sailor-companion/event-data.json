@@ -14,7 +14,8 @@
   "items": {
     "diamond-coin": { "name": "Diamond Coin", "kind": "currency" },
     "coin-of-courage": { "name": "Coin of Courage", "kind": "currency" },
-    "coin-of-combativeness": { "name": "Coin of Combativeness", "kind": "currency" },
+    "coin-of-combativeness-party": { "name": "Coin of Combativeness (Party)", "kind": "currency" },
+    "coin-of-combativeness-solo": { "name": "Coin of Combativeness (Solo)", "kind": "currency" },
     "sailor-points": { "name": "Sailor Points", "kind": "currency" },
     "silver-silk": { "name": "Silver Silk", "kind": "currency" },
     "wheel-of-fate": { "name": "Wheel of Fate", "kind": "box" },
@@ -316,10 +317,10 @@
       "summary": "Solo Survival Arena; rewards for up to 40 games a season.",
       "description": ["Solo Survival Arena. Each season grants rewards for up to 40 games; the limit carries over to the next season."],
       "rewards": {
-        "win": [{ "item": "diamond-coin", "count": 2 }, { "item": "coin-of-combativeness", "count": 6 }],
+        "win": [{ "item": "diamond-coin", "count": 2 }, { "item": "coin-of-combativeness-solo", "count": 6 }],
         "kill": [{ "item": "diamond-coin", "count": 1 }],
-        "draw": [{ "item": "diamond-coin", "count": 1 }, { "item": "coin-of-combativeness", "count": 3 }],
-        "defeat": [{ "item": "diamond-coin", "count": 1 }, { "item": "coin-of-combativeness", "count": 3 }]
+        "draw": [{ "item": "diamond-coin", "count": 1 }, { "item": "coin-of-combativeness-solo", "count": 3 }],
+        "defeat": [{ "item": "diamond-coin", "count": 1 }, { "item": "coin-of-combativeness-solo", "count": 3 }]
       },
       "requirements": { "itemPoints": 2300 }
     },
@@ -329,9 +330,9 @@
       "summary": "Party Survival Arena; rewards for up to 40 games a season.",
       "description": ["Party Survival Arena. Each season grants rewards for up to 40 games; the limit carries over to the next season."],
       "rewards": {
-        "win": [{ "item": "diamond-coin", "count": 4 }, { "item": "coin-of-combativeness", "count": 6 }],
-        "draw": [{ "item": "diamond-coin", "count": 2 }, { "item": "coin-of-combativeness", "count": 3 }],
-        "defeat": [{ "item": "diamond-coin", "count": 2 }, { "item": "coin-of-combativeness", "count": 3 }]
+        "win": [{ "item": "diamond-coin", "count": 4 }, { "item": "coin-of-combativeness-party", "count": 6 }],
+        "draw": [{ "item": "diamond-coin", "count": 2 }, { "item": "coin-of-combativeness-party", "count": 3 }],
+        "defeat": [{ "item": "diamond-coin", "count": 2 }, { "item": "coin-of-combativeness-party", "count": 3 }]
       },
       "requirements": { "itemPoints": 2300 }
     },
