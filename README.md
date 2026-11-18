@@ -23,6 +23,10 @@ All applications run on Windows 10 and 11 (64-bit).
 tools a player uses. The app reads `catalog.json`, downloads the selected package and checks it
 against the SHA-256 listed in the catalog before installing it.
 
+`event-data.json` holds the event details the Events module shows: a short summary, the description,
+rewards grouped by outcome or source (`events.<id>.rewards.win`, `.draw`, `.defeat`, `.kill`, ...)
+and structured requirements. The `format` block at the top of the file documents every field.
+
 | Module | Version | Package |
 | --- | --- | --- |
 | Sailor Events | 3.1.0 | `events-3.1.0.zip` |
@@ -39,7 +43,7 @@ Packages are installed through Sailor Companion; they are not meant to be unpack
 | `manifest.json` | Name, version and download link of each application |
 | `sailor-events/` | Application and the event data it downloads (`events.json`, `sailor_ad_events.json`, `tooltips.yaml`) |
 | `sailor-fixer/` | Application, its configuration files and `latest_game_files/` used to restore missing client files |
-| `sailor-companion/` | Module catalog and packages for Sailor Companion |
+| `sailor-companion/` | Module catalog, packages and event data (`event-data.json`) for Sailor Companion |
 | `sro-hider/`, `sro-sleep/`, `sro-alchemist/`, `sro-opus/` | Application builds |
 
 ## Security

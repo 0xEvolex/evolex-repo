@@ -1,0 +1,530 @@
+{
+  "schemaVersion": 1,
+  "format": {
+    "events": "Keyed by event id. 'name' matches the event name in sailor-events/events.json.",
+    "kind": "arena | unique | pve | trade | siege | reset | seasonal",
+    "summary": "One sentence for compact views.",
+    "description": "Paragraphs, in order.",
+    "rewards": "Groups of reward entries. Arena groups: win, draw, defeat, kill. Other groups are named after their source (e.g. roc, deathbone). Paths read like events.unique-clash.rewards.defeat.",
+    "rewardEntry": "item (id in 'items'), count (default 1), chance (0..1, omitted = guaranteed), max (cap per event), delivery (drop | inventory, default drop), note.",
+    "rewardNotes": "Free text about the rewards that has no item.",
+    "requirements": "itemPoints (minimum), maxItemPoints, level {min, max}, job (any | trader | hunter | thief), jobSuit, guild, register (NPC), noSpeedBuffs, notes.",
+    "items": "Item id -> name and kind. kind: currency | equipment | material | consumable | booster | scroll | box | avatar | other."
+  },
+  "items": {
+    "diamond-coin": { "name": "Diamond Coin", "kind": "currency" },
+    "coin-of-courage": { "name": "Coin of Courage", "kind": "currency" },
+    "coin-of-combativeness": { "name": "Coin of Combativeness", "kind": "currency" },
+    "sailor-points": { "name": "Sailor Points", "kind": "currency" },
+    "silver-silk": { "name": "Silver Silk", "kind": "currency" },
+    "wheel-of-fate": { "name": "Wheel of Fate", "kind": "box" },
+    "wheel-item": { "name": "Random Wheel item", "kind": "box" },
+    "gold-pile": { "name": "Gold Pile", "kind": "currency" },
+    "magic-pop-card": { "name": "Magic POP Card", "kind": "box" },
+    "premium-magic-pop-card": { "name": "Premium Magic POP Card", "kind": "box" },
+    "roc-set": { "name": "Roc Set equipment", "kind": "equipment" },
+    "d14-magic-item": { "name": "14th Degree Magic item", "kind": "equipment" },
+    "d13-legend-item": { "name": "13th Degree Legend item", "kind": "equipment" },
+    "d13-rare-item": { "name": "13th Degree Rare item", "kind": "equipment" },
+    "d13-special-awaken-stone": { "name": "13th Degree Special Awaken Stone (tradeable)", "kind": "material" },
+    "d13-special-awaken-stone-weapon": { "name": "13th Degree Special Awaken Stone Weapon (tradeable)", "kind": "material" },
+    "d13-special-awaken-stone-shield": { "name": "13th Degree Special Awaken Stone Shield (tradeable)", "kind": "material" },
+    "d14-magic-proof-stone": { "name": "14th Degree Magic Proof Stone", "kind": "material" },
+    "d14-magic-equipment": { "name": "14th Degree Magic equipment", "kind": "equipment" },
+    "rare-egyptian-a": { "name": "Rare Egyptian A-type equipment", "kind": "equipment" },
+    "d10-items": { "name": "10th Degree items (SoX, coupons, ...)", "kind": "equipment" },
+    "trigger-scroll": { "name": "Trigger Scroll", "kind": "scroll" },
+    "dodging-scroll": { "name": "Dodging Scroll", "kind": "scroll" },
+    "hit-scroll": { "name": "Hit Scroll", "kind": "scroll" },
+    "sp-scroll": { "name": "SP Scroll", "kind": "scroll" },
+    "int-scroll": { "name": "INT Scroll", "kind": "scroll" },
+    "str-scroll": { "name": "STR Scroll", "kind": "scroll" },
+    "monster-summon-scroll": { "name": "Monster Summon Scroll", "kind": "scroll" },
+    "instant-res-scroll": { "name": "Instant Resurrection Scroll", "kind": "scroll" },
+    "pandoras-box": { "name": "Pandora's Box", "kind": "box" },
+    "berserker-potion": { "name": "Berserker Potion", "kind": "consumable" },
+    "flowers": { "name": "Evil Scented, Illusion, Life, Energy and Whirling Snow Flowers", "kind": "consumable" },
+    "demon-shaitan-avatar": { "name": "Exclusive 2017 Demon Shaitan Avatar part", "kind": "avatar" },
+    "exp-booster-200": { "name": "200% Experience Booster", "kind": "booster" },
+    "sp-booster-200": { "name": "200% Skill Experience Booster", "kind": "booster" },
+    "ice-trophy": { "name": "Ice Trophy", "kind": "currency" },
+    "faded-bead": { "name": "Faded Bead", "kind": "material" },
+    "d11-magic-stone-coupon": { "name": "11D Magic Stone Coupon", "kind": "material" },
+    "d11-attribute-stone-coupon": { "name": "11D Attribute Stone Coupon", "kind": "material" },
+    "d11-weapon-elixir-coupon": { "name": "11D Weapon Elixir Coupon", "kind": "material" },
+    "d11-shield-elixir-coupon": { "name": "11D Shield Elixir Coupon", "kind": "material" },
+    "d11-protector-elixir-coupon": { "name": "11D Protector Elixir Coupon", "kind": "material" },
+    "d11-accessory-elixir-coupon": { "name": "11D Accessory Elixir Coupon", "kind": "material" },
+    "trade-profit": { "name": "Trade profit", "kind": "other" },
+    "tax-income": { "name": "Fortress tax income", "kind": "other" },
+    "attendance-reward": { "name": "Daily attendance reward", "kind": "other" },
+    "genie-equipment": { "name": "Genie Quest equipment", "kind": "equipment" },
+    "carnival-reward": { "name": "Balloon Carnival reward", "kind": "other" }
+  },
+  "events": {
+    "roc": {
+      "name": "Roc",
+      "kind": "unique",
+      "summary": "Weekly boss in Roc Mountain: defeat Roc, then its stronger form Deathbone.",
+      "description": ["Roc is a weekly unique boss event located in Roc Mountain.", "Defeat Roc and its stronger form, Deathbone, for valuable drops."],
+      "rewards": {
+        "roc": [
+          { "item": "wheel-item", "count": 10 },
+          { "item": "gold-pile", "count": 10 },
+          { "item": "magic-pop-card", "count": 10 },
+          { "item": "premium-magic-pop-card", "count": 6 },
+          { "item": "roc-set" },
+          { "item": "wheel-of-fate", "count": 3, "delivery": "inventory" },
+          { "item": "sailor-points", "count": 150, "delivery": "inventory" }
+        ],
+        "deathbone": [
+          { "item": "d14-magic-item", "count": 2 },
+          { "item": "d13-legend-item", "count": 3 },
+          { "item": "d13-rare-item", "count": 4 },
+          { "item": "d13-special-awaken-stone-weapon" },
+          { "item": "d13-special-awaken-stone-shield" },
+          { "item": "wheel-item", "count": 20 },
+          { "item": "gold-pile", "count": 16 },
+          { "item": "trigger-scroll" },
+          { "item": "dodging-scroll" },
+          { "item": "hit-scroll" },
+          { "item": "magic-pop-card", "count": 10 },
+          { "item": "premium-magic-pop-card", "count": 6 },
+          { "item": "demon-shaitan-avatar", "count": 6, "note": "Random parts." },
+          { "item": "wheel-of-fate", "count": 3, "delivery": "inventory" },
+          { "item": "sailor-points", "count": 150, "delivery": "inventory" }
+        ]
+      },
+      "requirements": { "notes": ["Move to Gate of Ruler in Roc Mountain and buy a key to enter its lair.", "Gate of Ruler is only open for a short time."] }
+    },
+    "medusa": {
+      "name": "Medusa",
+      "kind": "unique",
+      "summary": "Periodic unique boss with rare Egyptian equipment and alchemy materials.",
+      "description": ["Medusa is a unique boss that spawns periodically. Defeat her for rare Egyptian equipment and alchemy materials."],
+      "rewards": {
+        "medusa": [
+          { "item": "d13-special-awaken-stone" },
+          { "item": "gold-pile", "count": 8 },
+          { "item": "rare-egyptian-a", "chance": 0.5 },
+          { "item": "magic-pop-card", "count": 10 },
+          { "item": "premium-magic-pop-card", "count": 6 },
+          { "item": "d10-items" },
+          { "item": "wheel-of-fate", "delivery": "inventory" },
+          { "item": "silver-silk", "count": 100, "delivery": "inventory" }
+        ]
+      },
+      "requirements": { "notes": ["Enter the Gate of Sarin Tribe and defeat all her guardians to spawn Medusa.", "Gate of Sarin Tribe is only open for a short time."] }
+    },
+    "moon-gem": {
+      "name": "Moon Gem",
+      "kind": "pve",
+      "summary": "Get Moon Pots from Event So-Ok and trade 1 pot + 10 Moon Gems for a reward.",
+      "description": [
+        "Every hour Event So-Ok gives out Moon Pots for 10 minutes (xx:50 to xx:00), 1 to 10 at random.",
+        "Collect Moon Gems by killing monsters: 1 pot + 10 Moon Gems = 1 reward. Moon Gems also work as Vigor Potions."
+      ],
+      "rewards": {
+        "black-moon": [
+          { "item": "trigger-scroll" }, { "item": "dodging-scroll" }, { "item": "hit-scroll" }, { "item": "sp-scroll" },
+          { "item": "magic-pop-card" }, { "item": "pandoras-box" }, { "item": "berserker-potion" }, { "item": "flowers" }
+        ],
+        "red-moon": [
+          { "item": "int-scroll" }, { "item": "str-scroll" }, { "item": "pandoras-box" }, { "item": "monster-summon-scroll" }, { "item": "instant-res-scroll" }
+        ]
+      },
+      "requirements": { "register": "Event So-Ok", "notes": ["Speak to Event So-Ok in any town during the event to get Moon Pots."] }
+    },
+    "clash-of-the-gods": {
+      "name": "Clash of the Gods",
+      "kind": "arena",
+      "summary": "Team PvP around three Egyptian God uniques and waves of Mummies.",
+      "description": [
+        "Three Egyptian God uniques (Anput, Satis and Wadjet) and Mummy elites. A God kill gives 100 points to the player and their team, a Mummy 2 points, an enemy player 1 point.",
+        "When the first Anput spawns, 40 Mummies spawn in each team's zone. At 10, 5 and 2 minutes left, 40 Mummies spawn in the losing team's zone."
+      ],
+      "rewards": {
+        "win": [{ "item": "diamond-coin", "count": 10 }, { "item": "coin-of-courage", "count": 7 }],
+        "draw": [{ "item": "diamond-coin", "count": 6 }, { "item": "coin-of-courage", "count": 4 }],
+        "defeat": [{ "item": "diamond-coin", "count": 6 }, { "item": "coin-of-courage", "count": 4 }],
+        "unique": [{ "item": "wheel-of-fate", "note": "Killer party members." }, { "item": "silver-silk", "count": 10, "note": "Killer party members." }],
+        "mummy": [{ "item": "wheel-of-fate", "chance": 0.15 }]
+      },
+      "requirements": { "itemPoints": 2050, "register": "Arena Manager" }
+    },
+    "poison-temple": {
+      "name": "Poison Temple",
+      "kind": "unique",
+      "summary": "Job-only area where three uniques spawn at once.",
+      "description": [
+        "Three uniques spawn at the same time, one on each circular platform: North West, South West and South East.",
+        "Enter through the Tunnel of Abyss teleporters; entry is only open while the uniques spawn."
+      ],
+      "rewards": {
+        "unique": [
+          { "item": "d14-magic-proof-stone", "note": "Chance to drop." },
+          { "item": "wheel-item", "count": 5 },
+          { "item": "gold-pile", "count": 6 },
+          { "item": "magic-pop-card", "count": 4 },
+          { "item": "premium-magic-pop-card", "count": 3 },
+          { "item": "d14-magic-equipment", "note": "Chance to drop." },
+          { "item": "diamond-coin", "count": 5, "delivery": "inventory" },
+          { "item": "sailor-points", "count": 50, "delivery": "inventory" }
+        ]
+      },
+      "requirements": { "jobSuit": true, "job": "any" }
+    },
+    "sailors-clash": {
+      "name": "Sailors Clash",
+      "kind": "arena",
+      "summary": "Team PvP arena with loot boxes during the match.",
+      "description": ["A team-based PvP arena event. Loot boxes spawn at 09:30 (right at the start), 06:20 and 03:10."],
+      "rewards": {
+        "win": [{ "item": "diamond-coin", "count": 10 }, { "item": "coin-of-courage", "count": 7 }],
+        "draw": [{ "item": "diamond-coin", "count": 6 }, { "item": "coin-of-courage", "count": 4 }],
+        "defeat": [{ "item": "diamond-coin", "count": 6 }, { "item": "coin-of-courage", "count": 4 }]
+      },
+      "requirements": { "itemPoints": 2050, "register": "Arena Manager" }
+    },
+    "unique-clash": {
+      "name": "Unique Clash",
+      "kind": "arena",
+      "summary": "Team PvP arena with unique monsters.",
+      "description": ["A team-based PvP arena event with unique monsters."],
+      "rewards": {
+        "win": [{ "item": "diamond-coin", "count": 10 }, { "item": "coin-of-courage", "count": 7 }],
+        "draw": [{ "item": "diamond-coin", "count": 6 }, { "item": "coin-of-courage", "count": 4 }],
+        "defeat": [{ "item": "diamond-coin", "count": 6 }, { "item": "coin-of-courage", "count": 4 }]
+      },
+      "requirements": { "itemPoints": 2050, "register": "Arena Manager" }
+    },
+    "styria-clash": {
+      "name": "Styria Clash",
+      "kind": "arena",
+      "summary": "Job-themed team PvP arena with loot boxes during the match.",
+      "description": ["A job-themed team-based PvP arena event. Loot boxes spawn at 09:30 (right at the start), 06:20 and 03:10."],
+      "rewards": {
+        "win": [{ "item": "diamond-coin", "count": 12 }, { "item": "coin-of-courage", "count": 7 }],
+        "draw": [{ "item": "diamond-coin", "count": 7 }, { "item": "coin-of-courage", "count": 4 }],
+        "defeat": [{ "item": "diamond-coin", "count": 7 }, { "item": "coin-of-courage", "count": 4 }]
+      },
+      "requirements": { "itemPoints": 2050, "jobSuit": true, "register": "Arena Manager" }
+    },
+    "carnage-arena": {
+      "name": "Carnage Arena",
+      "kind": "arena",
+      "summary": "Free-for-all PvP arena with a bonus for each kill.",
+      "description": ["A free-for-all PvP arena event. Earn bonus rewards for each kill."],
+      "rewards": {
+        "win": [{ "item": "diamond-coin", "count": 10 }, { "item": "coin-of-courage", "count": 2 }],
+        "kill": [{ "item": "coin-of-courage", "count": 1, "max": 5 }],
+        "draw": [{ "item": "diamond-coin", "count": 7 }, { "item": "coin-of-courage", "count": 1 }],
+        "defeat": [{ "item": "diamond-coin", "count": 7 }, { "item": "coin-of-courage", "count": 1 }]
+      },
+      "requirements": { "itemPoints": 2050, "register": "Arena Manager" }
+    },
+    "carnage-party": {
+      "name": "Carnage Party",
+      "kind": "arena",
+      "summary": "Team PvP with random teams of 2 CH and 2 EU players.",
+      "description": ["A team-based PvP arena event. Players are put into random teams, no party needed.", "Each team has 2 CH and 2 EU players."],
+      "rewards": {
+        "win": [{ "item": "diamond-coin", "count": 12 }, { "item": "coin-of-courage", "count": 10 }],
+        "draw": [{ "item": "diamond-coin", "count": 8 }, { "item": "coin-of-courage", "count": 7 }],
+        "defeat": [{ "item": "diamond-coin", "count": 8 }, { "item": "coin-of-courage", "count": 7 }]
+      },
+      "requirements": { "itemPoints": 2300, "register": "Arena Manager" }
+    },
+    "ghost-hunt": {
+      "name": "Ghost Hunt",
+      "kind": "pve",
+      "summary": "Co-op hunt for ghost monsters with Talismans of Exorcism.",
+      "description": [
+        "A cooperative PvE event where players hunt ghost monsters with Talismans of Exorcism, sold at the Grocery Shop.",
+        "Cancel all movement speed buffs before the event starts, or you can't take part."
+      ],
+      "rewards": {
+        "win": [{ "item": "diamond-coin", "count": 8 }, { "item": "coin-of-courage", "count": 6 }],
+        "draw": [{ "item": "diamond-coin", "count": 5 }, { "item": "coin-of-courage", "count": 3 }],
+        "defeat": [{ "item": "diamond-coin", "count": 5 }, { "item": "coin-of-courage", "count": 3 }]
+      },
+      "requirements": { "itemPoints": 2050, "register": "So Ok", "noSpeedBuffs": true, "notes": ["Talismans of Exorcism required (Grocery Shop)."] }
+    },
+    "ba-random": {
+      "name": "BA Random",
+      "kind": "arena",
+      "summary": "Battle Arena with random teams.",
+      "description": ["Battle Arena with random team assignment."],
+      "rewards": {
+        "win": [{ "item": "diamond-coin", "count": 8 }, { "item": "coin-of-courage", "count": 6 }],
+        "draw": [{ "item": "diamond-coin", "count": 5 }, { "item": "coin-of-courage", "count": 3 }],
+        "defeat": [{ "item": "diamond-coin", "count": 5 }, { "item": "coin-of-courage", "count": 3 }]
+      },
+      "requirements": { "notes": ["No Item Point requirement: matchmaking uses Item Points."] }
+    },
+    "ba-party": {
+      "name": "BA Party",
+      "kind": "arena",
+      "summary": "Battle Arena with your own party.",
+      "description": ["Battle Arena where you enter with your own party."],
+      "rewards": {
+        "win": [{ "item": "diamond-coin", "count": 8 }, { "item": "coin-of-courage", "count": 6 }],
+        "draw": [{ "item": "diamond-coin", "count": 5 }, { "item": "coin-of-courage", "count": 3 }],
+        "defeat": [{ "item": "diamond-coin", "count": 5 }, { "item": "coin-of-courage", "count": 3 }]
+      },
+      "requirements": { "notes": ["No Item Point requirement: matchmaking uses Item Points."] }
+    },
+    "ba-guild": {
+      "name": "BA Guild",
+      "kind": "arena",
+      "summary": "Battle Arena with your guild.",
+      "description": ["Battle Arena where you enter with your guild."],
+      "rewards": {
+        "win": [{ "item": "diamond-coin", "count": 8 }, { "item": "coin-of-courage", "count": 6 }],
+        "draw": [{ "item": "diamond-coin", "count": 5 }, { "item": "coin-of-courage", "count": 3 }],
+        "defeat": [{ "item": "diamond-coin", "count": 5 }, { "item": "coin-of-courage", "count": 3 }]
+      },
+      "requirements": { "itemPoints": 2300, "guild": true, "register": "Arena Manager", "notes": ["The Guild Master or a deputy registers the members."] }
+    },
+    "ba-flag": {
+      "name": "BA Flag",
+      "kind": "arena",
+      "summary": "Battle Arena, capture the flag.",
+      "description": ["Battle Arena capture-the-flag mode."],
+      "rewards": {
+        "win": [{ "item": "diamond-coin", "count": 8 }, { "item": "coin-of-courage", "count": 6 }],
+        "draw": [{ "item": "diamond-coin", "count": 5 }, { "item": "coin-of-courage", "count": 3 }],
+        "defeat": [{ "item": "diamond-coin", "count": 5 }, { "item": "coin-of-courage", "count": 3 }]
+      },
+      "requirements": { "notes": ["No Item Point requirement: matchmaking uses Item Points."] }
+    },
+    "ba-job": {
+      "name": "BA Job",
+      "kind": "arena",
+      "summary": "Battle Arena, job-themed.",
+      "description": ["Battle Arena job-themed mode."],
+      "rewards": {
+        "win": [{ "item": "diamond-coin", "count": 8 }, { "item": "coin-of-courage", "count": 6 }],
+        "draw": [{ "item": "diamond-coin", "count": 5 }, { "item": "coin-of-courage", "count": 3 }],
+        "defeat": [{ "item": "diamond-coin", "count": 5 }, { "item": "coin-of-courage", "count": 3 }]
+      },
+      "requirements": { "notes": ["No Item Point requirement: matchmaking uses Item Points."] }
+    },
+    "sa-solo": {
+      "name": "SA Solo",
+      "kind": "arena",
+      "summary": "Solo Survival Arena; rewards for up to 40 games a season.",
+      "description": ["Solo Survival Arena. Each season grants rewards for up to 40 games; the limit carries over to the next season."],
+      "rewards": {
+        "win": [{ "item": "diamond-coin", "count": 2 }, { "item": "coin-of-combativeness", "count": 6 }],
+        "kill": [{ "item": "diamond-coin", "count": 1 }],
+        "draw": [{ "item": "diamond-coin", "count": 1 }, { "item": "coin-of-combativeness", "count": 3 }],
+        "defeat": [{ "item": "diamond-coin", "count": 1 }, { "item": "coin-of-combativeness", "count": 3 }]
+      },
+      "requirements": { "itemPoints": 2300 }
+    },
+    "sa-party": {
+      "name": "SA Party",
+      "kind": "arena",
+      "summary": "Party Survival Arena; rewards for up to 40 games a season.",
+      "description": ["Party Survival Arena. Each season grants rewards for up to 40 games; the limit carries over to the next season."],
+      "rewards": {
+        "win": [{ "item": "diamond-coin", "count": 4 }, { "item": "coin-of-combativeness", "count": 6 }],
+        "draw": [{ "item": "diamond-coin", "count": 2 }, { "item": "coin-of-combativeness", "count": 3 }],
+        "defeat": [{ "item": "diamond-coin", "count": 2 }, { "item": "coin-of-combativeness", "count": 3 }]
+      },
+      "requirements": { "itemPoints": 2300 }
+    },
+    "anubis-isis": {
+      "name": "Anubis & Isis",
+      "kind": "unique",
+      "summary": "Job Temple unique bosses; entrance at Salt Post in Alexandria.",
+      "description": ["A job temple unique boss encounter.", "The Job Temple entrance is at Salt Post in Alexandria."],
+      "rewards": {
+        "unique": [
+          { "item": "d14-magic-proof-stone", "note": "Chance to drop." },
+          { "item": "wheel-item", "count": 5 },
+          { "item": "gold-pile", "count": 6 },
+          { "item": "magic-pop-card", "count": 4 },
+          { "item": "premium-magic-pop-card", "count": 3 },
+          { "item": "d14-magic-equipment", "note": "Chance to drop." },
+          { "item": "diamond-coin", "count": 5, "delivery": "inventory" },
+          { "item": "sailor-points", "count": 50, "delivery": "inventory" }
+        ]
+      },
+      "requirements": { "jobSuit": true }
+    },
+    "selket-neith": {
+      "name": "Selket & Neith",
+      "kind": "unique",
+      "summary": "Job Temple unique bosses; entrance at Salt Post in Alexandria.",
+      "description": ["A job temple unique boss encounter.", "The Job Temple entrance is at Salt Post in Alexandria."],
+      "rewards": {
+        "unique": [
+          { "item": "d14-magic-proof-stone", "note": "Chance to drop." },
+          { "item": "wheel-item", "count": 5 },
+          { "item": "gold-pile", "count": 6 },
+          { "item": "magic-pop-card", "count": 4 },
+          { "item": "premium-magic-pop-card", "count": 3 },
+          { "item": "d14-magic-equipment", "note": "Chance to drop." },
+          { "item": "diamond-coin", "count": 5, "delivery": "inventory" },
+          { "item": "sailor-points", "count": 50, "delivery": "inventory" }
+        ]
+      },
+      "requirements": { "jobSuit": true }
+    },
+    "haroeris-seth": {
+      "name": "Haroeris & Seth",
+      "kind": "unique",
+      "summary": "Job Temple: three shadow uniques of rising difficulty.",
+      "description": ["A job temple encounter with three shadow uniques of increasing difficulty.", "The Job Temple entrance is at Salt Post in Alexandria."],
+      "rewards": {
+        "shadow-eris": [
+          { "item": "d14-magic-proof-stone", "note": "Chance to drop." },
+          { "item": "wheel-item", "count": 3 },
+          { "item": "gold-pile", "count": 6 },
+          { "item": "magic-pop-card", "count": 4 },
+          { "item": "premium-magic-pop-card", "count": 3 },
+          { "item": "d14-magic-equipment", "note": "Chance to drop." },
+          { "item": "diamond-coin", "count": 3, "delivery": "inventory" },
+          { "item": "sailor-points", "count": 30, "delivery": "inventory" }
+        ],
+        "shadow-haroeris": [
+          { "item": "d14-magic-proof-stone", "note": "Chance to drop." },
+          { "item": "wheel-item", "count": 6 },
+          { "item": "gold-pile", "count": 7 },
+          { "item": "d14-magic-equipment", "note": "Chance to drop." },
+          { "item": "diamond-coin", "count": 6, "delivery": "inventory" },
+          { "item": "sailor-points", "count": 60, "delivery": "inventory" }
+        ],
+        "shadow-seth": [
+          { "item": "d14-magic-proof-stone", "note": "Chance to drop." },
+          { "item": "wheel-item", "count": 8 },
+          { "item": "gold-pile", "count": 8 },
+          { "item": "magic-pop-card", "count": 4 },
+          { "item": "premium-magic-pop-card", "count": 3 },
+          { "item": "d14-magic-equipment", "note": "Chance to drop." },
+          { "item": "diamond-coin", "count": 7, "delivery": "inventory" },
+          { "item": "sailor-points", "count": 70, "delivery": "inventory" }
+        ]
+      },
+      "requirements": { "jobSuit": true }
+    },
+    "fortress-war": {
+      "name": "Fortress War",
+      "kind": "siege",
+      "summary": "Weekly guild siege; hold a fortress to earn its towns' tax.",
+      "description": [
+        "Weekly guild-vs-guild siege. Conquer a fortress to earn tax income from its towns. Lasts 60 minutes.",
+        "Registration stays open until 19:30 GMT+2. Fortresses: Jangan, and Bandit (max. 2350 Item Points)."
+      ],
+      "rewards": { "win": [{ "item": "tax-income" }] },
+      "requirements": { "guild": true, "notes": ["Pick Pet and Fellow Pet must both be dismissed to teleport into the fortress areas.", "Bandit Fortress: 2350 Item Points at most."] }
+    },
+    "capture-the-flag": {
+      "name": "Capture the Flag",
+      "kind": "arena",
+      "summary": "Capture-the-flag PvP for levels 60 to 120.",
+      "description": ["A capture-the-flag PvP event only for characters between level 60 and 120.", "Trade 10 Ice Trophies for one random reward at Event So-Ok."],
+      "rewards": {
+        "win": [
+          { "item": "exp-booster-200", "note": "2 hours." },
+          { "item": "sp-booster-200", "note": "2 hours." },
+          { "item": "ice-trophy", "count": 20 }
+        ],
+        "draw": [
+          { "item": "exp-booster-200", "note": "1 hour." },
+          { "item": "sp-booster-200", "note": "1 hour." },
+          { "item": "ice-trophy", "count": 10 }
+        ],
+        "defeat": [
+          { "item": "exp-booster-200", "note": "1 hour." },
+          { "item": "sp-booster-200", "note": "1 hour." },
+          { "item": "ice-trophy", "count": 10 }
+        ],
+        "trophy-exchange": [
+          { "item": "faded-bead", "chance": 0.25 },
+          { "item": "magic-pop-card", "chance": 0.2 },
+          { "item": "d11-magic-stone-coupon", "chance": 0.15 },
+          { "item": "d11-attribute-stone-coupon", "chance": 0.1 },
+          { "item": "premium-magic-pop-card", "chance": 0.1 },
+          { "item": "d11-weapon-elixir-coupon", "chance": 0.05 },
+          { "item": "d11-shield-elixir-coupon", "chance": 0.05 },
+          { "item": "d11-protector-elixir-coupon", "chance": 0.05 },
+          { "item": "d11-accessory-elixir-coupon", "chance": 0.05 }
+        ]
+      },
+      "requirements": { "level": { "min": 60, "max": 120 } }
+    },
+    "special-trade-1h": {
+      "name": "Special Trade (1 hour)",
+      "kind": "trade",
+      "summary": "All special trade routes are open for an hour.",
+      "description": [
+        "Special Trades are time-limited events where all special trade routes are enabled. See the jobbing guide on Sailor's website.",
+        "Daily: 02:00-03:00 GMT+2 (1 hour), 15:00-16:00 (1 hour, 2 hours on Sunday), 20:00-22:00 (2 hours, not on Sunday)."
+      ],
+      "rewards": { "participation": [{ "item": "trade-profit" }] },
+      "requirements": { "job": "trader" }
+    },
+    "special-trade-2h": {
+      "name": "Special Trade (2 hours)",
+      "kind": "trade",
+      "summary": "All special trade routes are open for two hours.",
+      "description": [
+        "Special Trades are time-limited events where all special trade routes are enabled. See the jobbing guide on Sailor's website.",
+        "Daily: 02:00-03:00 GMT+2 (1 hour), 15:00-16:00 (1 hour, 2 hours on Sunday), 20:00-22:00 (2 hours, not on Sunday)."
+      ],
+      "rewards": { "participation": [{ "item": "trade-profit" }] },
+      "requirements": { "job": "trader" }
+    },
+    "fence-trade": {
+      "name": "Fence Trade",
+      "kind": "trade",
+      "summary": "Special Trade for thieves, usually an hour after Special Trade.",
+      "description": [
+        "Fence Trades are Special Trades for thieves. They usually start one hour after Special Trades. See the jobbing guide on Sailor's website.",
+        "Thu, Fri, Sat and Sun: 03:00-04:00 and 16:00-17:00 GMT+2."
+      ],
+      "rewards": { "participation": [{ "item": "trade-profit" }] },
+      "requirements": { "job": "thief", "notes": ["Thief level 13 or higher."] }
+    },
+    "calendar-reset": {
+      "name": "Calendar Reset",
+      "kind": "reset",
+      "summary": "The attendance calendar can be claimed again.",
+      "description": ["The Attendance Reward Calendar resets and can be claimed again.", "Once the calendar ends, its rewards can no longer be claimed."],
+      "rewards": { "daily": [{ "item": "attendance-reward" }] },
+      "requirements": { "notes": ["Once a day."] }
+    },
+    "genie-reset": {
+      "name": "Genie Reset",
+      "kind": "reset",
+      "summary": "The daily Genie Quest resets.",
+      "description": ["Genie Reset resets the Genie Quest and the Genie Quest Manager, a daily quest that helps you gear up.", "You may have to abandon the quest if you outlevel it."],
+      "rewards": {
+        "daily": [{ "item": "genie-equipment" }]
+      },
+      "rewardNotes": [
+        "Lv 71-90: D11 Egy A and Egy B equipment.",
+        "Lv 91-100: D11 Egy A, Egy B and D12 Magic equipment.",
+        "Lv 101-110: D11 Egy A, Egy B and D12 Magic, Rare and Legend equipment.",
+        "Lv 111-130: D12/D13 Magic, Rare and Legend equipment."
+      ],
+      "requirements": { "notes": ["Once a day."] }
+    },
+    "balloon-carnival": {
+      "name": "Balloon Carnival",
+      "kind": "seasonal",
+      "summary": "Collect Rubber Pieces from monsters and trade them with Jooa.",
+      "description": [
+        "Carnival Manager Jooa collects Rubber Pieces, which monsters of every kind drop all over the world.",
+        "Defeat monsters, collect Rubber Pieces and trade them with Jooa for rewards."
+      ],
+      "rewards": { "exchange": [{ "item": "carnival-reward" }] },
+      "rewardNotes": ["See the event page for the full list.", "All rewards except Avatar and Pet expire when the event ends (May 31st)."],
+      "links": [{ "label": "Balloon Carnival event page", "url": "https://pe.sailor-online.com/en/knowledgebase/balloon-carnival-event" }],
+      "requirements": { "register": "Carnival Manager Jooa", "notes": ["Speak to Jooa in any town during the event to get Balloons."] }
+    }
+  }
+}
