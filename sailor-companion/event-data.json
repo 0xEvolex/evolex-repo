@@ -66,8 +66,8 @@
     "roc": {
       "name": "Roc",
       "kind": "unique",
-      "summary": "Weekly boss in Roc Mountain: defeat Roc, then its stronger form Deathbone.",
-      "description": ["Roc is a weekly unique boss event located in Roc Mountain.", "Defeat Roc and its stronger form, Deathbone, for valuable drops."],
+      "summary": "Weekly boss in Roc Mountain: beat Roc, then its stronger form Deathbone.",
+      "description": ["Roc is a weekly unique boss in Roc Mountain. Defeat Roc, then its stronger form Deathbone, for valuable drops.", "- Move to the Gate of Ruler in Roc Mountain.", "- Buy a key to enter its lair.", "- Enter the lair quickly as the gate will only stay open for 10 minutes.", "- Once you're inside make sure to move to not be kicked out by the AFK system."],
       "rewards": {
         "roc": [
           { "item": "wheel-item", "count": 10 },
@@ -101,8 +101,8 @@
     "medusa": {
       "name": "Medusa",
       "kind": "unique",
-      "summary": "Periodic unique boss with rare Egyptian equipment and alchemy materials.",
-      "description": ["Medusa is a unique boss that spawns periodically. Defeat her for rare Egyptian equipment and alchemy materials."],
+      "summary": "Unique boss in Jangan Cave: clear her guardians, then face Medusa.",
+      "description": ["Medusa is a unique boss inside the Qin Shi Tomb, otherwise known as Jangan Cave.", "- Move to the Gate of Sarin Tribe in the Qin Shi Tomb at the center of level B4.", "- Enter her lair quickly as the gate will only stay open for 10 minutes.", "Once inside four Guardians are at the end of each arm of the cross:", "- North is JeonUk The Black Tortoise", "- South is YumJae The Red Hawk", "- West is TaeHo The Blue Dragon", "- East is SoHaow The White Tiger", "- Once they are defeated Shinmoo: The Man of Flames spawns in the SW corner of the center room.", "Upon defeating Shinmoo you can enter B6, kill a couple of more guardians and face Medusa!"],
       "rewards": {
         "medusa": [
           { "item": "d13-special-awaken-stone" },
@@ -120,10 +120,11 @@
     "moon-gem": {
       "name": "Moon Gem",
       "kind": "pve",
-      "summary": "Get Moon Pots from Event So-Ok and trade 1 pot + 10 Moon Gems for a reward.",
+      "summary": "Get Moon Pots from Event So-Ok, then trade 1 pot + 10 Moon Gems for a reward.",
       "description": [
-        "Every hour Event So-Ok gives out Moon Pots for 10 minutes (xx:50 to xx:00), 1 to 10 at random.",
-        "Collect Moon Gems by killing monsters: 1 pot + 10 Moon Gems = 1 reward. Moon Gems also work as Vigor Potions."
+        "Every hour from xx:50 to xx:00, Event So-Ok in every town gives out 1 to 10 Moon Pots at random.",
+        "Monsters drop Moon Gems. Trade 1 Moon Pot and 10 Moon Gems for one reward. Moon Gems also work as Vigor Potions.",
+        "Collect gems while you hunt anyway, and be in town at xx:50 to pick up your pots."
       ],
       "rewards": {
         "black-moon": [
@@ -139,10 +140,12 @@
     "clash-of-the-gods": {
       "name": "Clash of the Gods",
       "kind": "arena",
-      "summary": "Team PvP around three Egyptian God uniques and waves of Mummies.",
+      "summary": "Team PvP: kill the three Egyptian Gods and Mummy waves for points.",
       "description": [
-        "Three Egyptian God uniques (Anput, Satis and Wadjet) and Mummy elites. A God kill gives 100 points to the player and their team, a Mummy 2 points, an enemy player 1 point.",
-        "When the first Anput spawns, 40 Mummies spawn in each team's zone. At 10, 5 and 2 minutes left, 40 Mummies spawn in the losing team's zone."
+        "A team PvP arena around three Egyptian God uniques (Anput, Satis and Wadjet) and waves of Mummy elites.",
+        "Points: a God kill gives 100 points to the player and their team, a Mummy 2 points, an enemy player 1 point.",
+        "When the first Anput spawns, 40 Mummies spawn in each team's zone. At 10, 5 and 2 minutes left, 40 more spawn in the losing team's zone.",
+        "Strategy: one God is worth 100 player kills, so the team that takes the uniques wins. The Mummy waves help a losing team catch up, so a leading team should not stop scoring."
       ],
       "rewards": {
         "win": [{ "item": "diamond-coin", "count": 10 }, { "item": "coin-of-courage", "count": 7 }],
@@ -159,7 +162,8 @@
       "summary": "Job-only area where three uniques spawn at once.",
       "description": [
         "Three uniques spawn at the same time, one on each circular platform: North West, South West and South East.",
-        "Enter through the Tunnel of Abyss teleporters; entry is only open while the uniques spawn."
+        "Enter through the Tunnel of Abyss teleporters. Entry is only open while the uniques spawn, so wait at a teleporter before the event starts.",
+        "Strategy: pick one platform with your party instead of running between all three. Expect other job players at every platform."
       ],
       "rewards": {
         "unique": [
@@ -178,8 +182,8 @@
     "sailors-clash": {
       "name": "Sailors Clash",
       "kind": "arena",
-      "summary": "Team PvP arena with loot boxes during the match.",
-      "description": ["A team-based PvP arena event. Loot boxes spawn at 09:30 (right at the start), 06:20 and 03:10."],
+      "summary": "A team-based PvP arena event on a large scale. Claim boxes to win!",
+      "description": ["A team PvP arena event.", "Loot boxes spawn three times during the match: at 09:30 (right at the start), 06:20 and 03:10 on the match timer.", "Strategy: be near the boxes at those times. Winning the fight around a box is often worth more than chasing kills."],
       "rewards": {
         "win": [{ "item": "diamond-coin", "count": 10 }, { "item": "coin-of-courage", "count": 7 }],
         "draw": [{ "item": "diamond-coin", "count": 6 }, { "item": "coin-of-courage", "count": 4 }],
@@ -190,8 +194,8 @@
     "unique-clash": {
       "name": "Unique Clash",
       "kind": "arena",
-      "summary": "Team PvP arena with unique monsters.",
-      "description": ["A team-based PvP arena event with unique monsters."],
+      "summary": "A team-based PvP arena event on a large scale, focus down uniques to win!",
+      "description": ["A team PvP arena event with unique monsters on the map.", "Strategy: fight for the uniques as a team. A split team often loses both the unique and the fight."],
       "rewards": {
         "win": [{ "item": "diamond-coin", "count": 10 }, { "item": "coin-of-courage", "count": 7 }],
         "draw": [{ "item": "diamond-coin", "count": 6 }, { "item": "coin-of-courage", "count": 4 }],
@@ -202,8 +206,8 @@
     "styria-clash": {
       "name": "Styria Clash",
       "kind": "arena",
-      "summary": "Job-themed team PvP arena with loot boxes during the match.",
-      "description": ["A job-themed team-based PvP arena event. Loot boxes spawn at 09:30 (right at the start), 06:20 and 03:10."],
+      "summary": "Job-themed team PvP arena; Traders & Hunters vs. Thieves!",
+      "description": ["A job-themed team PvP arena event. Wear your job suit.", "Loot boxes spawn three times during the match: at 09:30 (right at the start), 06:20 and 03:10 on the match timer.", "Strategy: be near the boxes at those times. Winning the fight around a box is often worth more than chasing kills."],
       "rewards": {
         "win": [{ "item": "diamond-coin", "count": 12 }, { "item": "coin-of-courage", "count": 7 }],
         "draw": [{ "item": "diamond-coin", "count": 7 }, { "item": "coin-of-courage", "count": 4 }],
@@ -214,8 +218,8 @@
     "carnage-arena": {
       "name": "Carnage Arena",
       "kind": "arena",
-      "summary": "Free-for-all PvP arena with a bonus for each kill.",
-      "description": ["A free-for-all PvP arena event. Earn bonus rewards for each kill."],
+      "summary": "Slaughter your enemies in a massive solo deathmatch!",
+      "description": ["A free-for-all PvP arena. Everyone fights alone, and each kill earns bonus rewards on top of the match result.", "Strategy: join fights that have already started and finish weakened players. Staying alive longer gives you more chances to score."],
       "rewards": {
         "win": [{ "item": "diamond-coin", "count": 10 }, { "item": "coin-of-courage", "count": 2 }],
         "kill": [{ "item": "coin-of-courage", "count": 1, "max": 5 }],
@@ -227,8 +231,8 @@
     "carnage-party": {
       "name": "Carnage Party",
       "kind": "arena",
-      "summary": "Team PvP with random teams of 2 CH and 2 EU players.",
-      "description": ["A team-based PvP arena event. Players are put into random teams, no party needed.", "Each team has 2 CH and 2 EU players."],
+      "summary": "Jump in and prove your team-play prowess in a 4v4 free-for-all!",
+      "description": ["A team PvP arena where the game puts you into a random team, so you need no party.", "Every team has 2 CH and 2 EU players.", "Strategy: you meet your team at the start, so agree on a target quickly and stay together."],
       "rewards": {
         "win": [{ "item": "diamond-coin", "count": 12 }, { "item": "coin-of-courage", "count": 10 }],
         "draw": [{ "item": "diamond-coin", "count": 8 }, { "item": "coin-of-courage", "count": 7 }],
@@ -239,10 +243,11 @@
     "ghost-hunt": {
       "name": "Ghost Hunt",
       "kind": "pve",
-      "summary": "Co-op hunt for ghost monsters with Talismans of Exorcism.",
+      "summary": "Form parties, defend positions, and hunt ghosts in a massive team deathmatch!",
       "description": [
-        "A cooperative PvE event where players hunt ghost monsters with Talismans of Exorcism, sold at the Grocery Shop.",
-        "Cancel all movement speed buffs before the event starts, or you can't take part."
+        "A cooperative PvE event: players hunt ghost monsters with Talismans of Exorcism.",
+        "Buy the Talismans at the Grocery Shop before the event. Cancel all movement speed buffs before the event starts, or you can't take part.",
+        "Strategy: bring enough Talismans for the whole event, so you don't have to leave to buy more."
       ],
       "rewards": {
         "win": [{ "item": "diamond-coin", "count": 8 }, { "item": "coin-of-courage", "count": 6 }],
@@ -254,8 +259,8 @@
     "ba-random": {
       "name": "BA Random",
       "kind": "arena",
-      "summary": "Battle Arena with random teams.",
-      "description": ["Battle Arena with random team assignment."],
+      "summary": "Dive in and fight, no preparation needed!",
+      "description": ["Battle Arena where the game puts you into a random team.", "Good when you have no party: register alone and play."],
       "rewards": {
         "win": [{ "item": "diamond-coin", "count": 8 }, { "item": "coin-of-courage", "count": 6 }],
         "draw": [{ "item": "diamond-coin", "count": 5 }, { "item": "coin-of-courage", "count": 3 }],
@@ -266,8 +271,8 @@
     "ba-party": {
       "name": "BA Party",
       "kind": "arena",
-      "summary": "Battle Arena with your own party.",
-      "description": ["Battle Arena where you enter with your own party."],
+      "summary": "Form your own party ahead of time and join the fun!",
+      "description": ["Battle Arena where you enter with your own party.", "Strategy: a party that plays together often wins against random teams, so agree on roles before the match."],
       "rewards": {
         "win": [{ "item": "diamond-coin", "count": 8 }, { "item": "coin-of-courage", "count": 6 }],
         "draw": [{ "item": "diamond-coin", "count": 5 }, { "item": "coin-of-courage", "count": 3 }],
@@ -278,8 +283,8 @@
     "ba-guild": {
       "name": "BA Guild",
       "kind": "arena",
-      "summary": "Battle Arena with your guild.",
-      "description": ["Battle Arena where you enter with your guild."],
+      "summary": "Gather your guild and prove your strength!",
+      "description": ["Battle Arena where you enter with your guild.", "The Guild Master or a deputy registers the members, so be online and ready before registration closes."],
       "rewards": {
         "win": [{ "item": "diamond-coin", "count": 8 }, { "item": "coin-of-courage", "count": 6 }],
         "draw": [{ "item": "diamond-coin", "count": 5 }, { "item": "coin-of-courage", "count": 3 }],
@@ -290,8 +295,8 @@
     "ba-flag": {
       "name": "BA Flag",
       "kind": "arena",
-      "summary": "Battle Arena, capture the flag.",
-      "description": ["Battle Arena capture-the-flag mode."],
+      "summary": "Fight your enemies and capture the flag!",
+      "description": ["Battle Arena in capture-the-flag mode.", "Strategy: split your team into attackers and defenders, so your own flag is never left alone."],
       "rewards": {
         "win": [{ "item": "diamond-coin", "count": 8 }, { "item": "coin-of-courage", "count": 6 }],
         "draw": [{ "item": "diamond-coin", "count": 5 }, { "item": "coin-of-courage", "count": 3 }],
@@ -302,8 +307,8 @@
     "ba-job": {
       "name": "BA Job",
       "kind": "arena",
-      "summary": "Battle Arena, job-themed.",
-      "description": ["Battle Arena job-themed mode."],
+      "summary": "Battle Arena in Job Mode, equip your suit!",
+      "description": ["Battle Arena in job-themed mode. Wear your job suit."],
       "rewards": {
         "win": [{ "item": "diamond-coin", "count": 8 }, { "item": "coin-of-courage", "count": 6 }],
         "draw": [{ "item": "diamond-coin", "count": 5 }, { "item": "coin-of-courage", "count": 3 }],
@@ -314,8 +319,8 @@
     "sa-solo": {
       "name": "SA Solo",
       "kind": "arena",
-      "summary": "Solo Survival Arena; rewards for up to 40 games a season.",
-      "description": ["Solo Survival Arena. Each season grants rewards for up to 40 games; the limit carries over to the next season."],
+      "summary": "Solo Survival Arena; show them who's strongest!",
+      "description": ["Survival Arena where you fight alone.", "Each season grants rewards for up to 40 games. The limit carries over to the next season."],
       "rewards": {
         "win": [{ "item": "diamond-coin", "count": 2 }, { "item": "coin-of-combativeness-solo", "count": 6 }],
         "kill": [{ "item": "diamond-coin", "count": 1 }],
@@ -327,8 +332,8 @@
     "sa-party": {
       "name": "SA Party",
       "kind": "arena",
-      "summary": "Party Survival Arena; rewards for up to 40 games a season.",
-      "description": ["Party Survival Arena. Each season grants rewards for up to 40 games; the limit carries over to the next season."],
+      "summary": "Party Survival Arena; party up and dominate!",
+      "description": ["Survival Arena where you fight with your party.", "Each season grants rewards for up to 40 games. The limit carries over to the next season."],
       "rewards": {
         "win": [{ "item": "diamond-coin", "count": 4 }, { "item": "coin-of-combativeness-party", "count": 6 }],
         "draw": [{ "item": "diamond-coin", "count": 2 }, { "item": "coin-of-combativeness-party", "count": 3 }],
@@ -339,8 +344,8 @@
     "anubis-isis": {
       "name": "Anubis & Isis",
       "kind": "unique",
-      "summary": "Job Temple unique bosses; entrance at Salt Post in Alexandria.",
-      "description": ["A job temple unique boss encounter.", "The Job Temple entrance is at Salt Post in Alexandria."],
+      "summary": "Job Temple bosses Anubis and Isis; entrance at Salt Post in Alexandria.",
+      "description": ["A Job Temple unique boss encounter with Anubis and Isis. Wear your job suit.", "The Job Temple entrance is at Salt Post in Alexandria."],
       "rewards": {
         "unique": [
           { "item": "d14-magic-proof-stone", "note": "Chance to drop." },
@@ -358,8 +363,8 @@
     "selket-neith": {
       "name": "Selket & Neith",
       "kind": "unique",
-      "summary": "Job Temple unique bosses; entrance at Salt Post in Alexandria.",
-      "description": ["A job temple unique boss encounter.", "The Job Temple entrance is at Salt Post in Alexandria."],
+      "summary": "Job Temple bosses Selket and Neith; entrance at Salt Post in Alexandria.",
+      "description": ["A Job Temple unique boss encounter with Selket and Neith. Wear your job suit.", "The Job Temple entrance is at Salt Post in Alexandria."],
       "rewards": {
         "unique": [
           { "item": "d14-magic-proof-stone", "note": "Chance to drop." },
@@ -377,8 +382,8 @@
     "haroeris-seth": {
       "name": "Haroeris & Seth",
       "kind": "unique",
-      "summary": "Job Temple: three shadow uniques of rising difficulty.",
-      "description": ["A job temple encounter with three shadow uniques of increasing difficulty.", "The Job Temple entrance is at Salt Post in Alexandria."],
+      "summary": "Job Temple: two Egyptian uniques of rising difficulty.",
+      "description": ["A Job Temple encounter with three shadow uniques of rising difficulty: Shadow Eris, Shadow Haroeris and Shadow Seth. Wear your job suit.", "The Job Temple entrance is at Salt Post in Alexandria.", "Strategy: save potions and your strongest skills for the last boss."],
       "rewards": {
         "shadow-eris": [
           { "item": "d14-magic-proof-stone", "note": "Chance to drop." },
@@ -414,10 +419,11 @@
     "fortress-war": {
       "name": "Fortress War",
       "kind": "siege",
-      "summary": "Weekly guild siege; hold a fortress to earn its towns' tax.",
+      "summary": "Weekly guild siege: conquer a fortress and collect its towns' tax.",
       "description": [
-        "Weekly guild-vs-guild siege. Conquer a fortress to earn tax income from its towns. Lasts 60 minutes.",
-        "Registration stays open until 19:30 GMT+2. Fortresses: Jangan, and Bandit (max. 2350 Item Points)."
+        "A weekly guild-vs-guild siege that lasts 60 minutes. The guild that conquers a fortress earns tax income from its towns.",
+        "Fortresses: Jangan, and Bandit (max. 2350 Item Points). Registration stays open until 19:30 GMT+2.",
+        "Dismiss your Pick Pet and Fellow Pet before you teleport into the fortress area."
       ],
       "rewards": { "win": [{ "item": "tax-income" }] },
       "requirements": { "guild": true, "notes": ["Pick Pet and Fellow Pet must both be dismissed to teleport into the fortress areas.", "Bandit Fortress: 2350 Item Points at most."] }
@@ -425,8 +431,8 @@
     "capture-the-flag": {
       "name": "Capture the Flag",
       "kind": "arena",
-      "summary": "Capture-the-flag PvP for levels 60 to 120.",
-      "description": ["A capture-the-flag PvP event only for characters between level 60 and 120.", "Trade 10 Ice Trophies for one random reward at Event So-Ok."],
+      "summary": "Capture-the-flag PvP for beginners!",
+      "description": ["A capture-the-flag PvP event only for characters from level 60 to 120.", "Trade 10 Ice Trophies at Event So-Ok for one random reward."],
       "rewards": {
         "win": [
           { "item": "exp-booster-200", "note": "2 hours." },
@@ -462,8 +468,9 @@
       "kind": "trade",
       "summary": "All special trade routes are open for an hour.",
       "description": [
-        "Special Trades are time-limited events where all special trade routes are enabled. See the jobbing guide on Sailor's website.",
-        "Daily: 02:00-03:00 GMT+2 (1 hour), 15:00-16:00 (1 hour, 2 hours on Sunday), 20:00-22:00 (2 hours, not on Sunday)."
+        "During a Special Trade, every special trade route is open. See the jobbing guide on Sailor's website for the routes.",
+        "Times (GMT+2): 02:00-03:00 daily, 15:00-16:00 (2 hours on Sunday), 20:00-22:00 (not on Sunday).",
+        "Strategy: buy your goods and be at the start of your route before the event begins, so you use the whole hour."
       ],
       "rewards": { "participation": [{ "item": "trade-profit" }] },
       "requirements": { "job": "trader" }
@@ -473,8 +480,9 @@
       "kind": "trade",
       "summary": "All special trade routes are open for two hours.",
       "description": [
-        "Special Trades are time-limited events where all special trade routes are enabled. See the jobbing guide on Sailor's website.",
-        "Daily: 02:00-03:00 GMT+2 (1 hour), 15:00-16:00 (1 hour, 2 hours on Sunday), 20:00-22:00 (2 hours, not on Sunday)."
+        "During a Special Trade, every special trade route is open. See the jobbing guide on Sailor's website for the routes.",
+        "Times (GMT+2): 02:00-03:00 daily, 15:00-16:00 (2 hours on Sunday), 20:00-22:00 (not on Sunday).",
+        "Strategy: two hours are enough for more than one run, so plan a route that ends near the next start."
       ],
       "rewards": { "participation": [{ "item": "trade-profit" }] },
       "requirements": { "job": "trader" }
@@ -482,10 +490,11 @@
     "fence-trade": {
       "name": "Fence Trade",
       "kind": "trade",
-      "summary": "Special Trade for thieves, usually an hour after Special Trade.",
+      "summary": "Special Trade for thieves, jump into Thief Town!",
       "description": [
-        "Fence Trades are Special Trades for thieves. They usually start one hour after Special Trades. See the jobbing guide on Sailor's website.",
-        "Thu, Fri, Sat and Sun: 03:00-04:00 and 16:00-17:00 GMT+2."
+        "Fence Trades are Special Trades for thieves. They usually start one hour after a Special Trade. See the jobbing guide on Sailor's website.",
+        "Times (GMT+2): Thu, Fri, Sat and Sun, 03:00-04:00 and 16:00-17:00.",
+        "You need thief level 13 or higher."
       ],
       "rewards": { "participation": [{ "item": "trade-profit" }] },
       "requirements": { "job": "thief", "notes": ["Thief level 13 or higher."] }
@@ -494,7 +503,7 @@
       "name": "Calendar Reset",
       "kind": "reset",
       "summary": "The attendance calendar can be claimed again.",
-      "description": ["The Attendance Reward Calendar resets and can be claimed again.", "Once the calendar ends, its rewards can no longer be claimed."],
+      "description": ["The Attendance Reward Calendar resets once a day and can be claimed again.", "Claim it every day: once the calendar ends, its rewards can no longer be claimed."],
       "rewards": { "daily": [{ "item": "attendance-reward" }] },
       "requirements": { "notes": ["Once a day."] }
     },
@@ -502,7 +511,7 @@
       "name": "Genie Reset",
       "kind": "reset",
       "summary": "The daily Genie Quest resets.",
-      "description": ["Genie Reset resets the Genie Quest and the Genie Quest Manager, a daily quest that helps you gear up.", "You may have to abandon the quest if you outlevel it."],
+      "description": ["Genie Reset resets the Genie Quest and the Genie Quest Manager. It is a daily quest that helps you gear up.", "The reward depends on your level, from D11 Egyptian equipment at level 71 up to D12/D13 Legend equipment at level 111-130.", "If you outlevel the quest, you may have to abandon it and take it again."],
       "rewards": {
         "daily": [{ "item": "genie-equipment" }]
       },
@@ -519,8 +528,9 @@
       "kind": "seasonal",
       "summary": "Collect Rubber Pieces from monsters and trade them with Jooa.",
       "description": [
-        "Carnival Manager Jooa collects Rubber Pieces, which monsters of every kind drop all over the world.",
-        "Defeat monsters, collect Rubber Pieces and trade them with Jooa for rewards."
+        "Carnival Manager Jooa collects Rubber Pieces. Monsters of every kind drop them all over the world.",
+        "Defeat monsters, collect Rubber Pieces and trade them with Jooa in any town for rewards.",
+        "All rewards except Avatar and Pet expire when the event ends."
       ],
       "rewards": { "exchange": [{ "item": "carnival-reward" }] },
       "rewardNotes": ["See the event page for the full list.", "All rewards except Avatar and Pet expire when the event ends (May 31st)."],
