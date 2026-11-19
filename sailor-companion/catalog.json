@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "app": {
-    "version": "0.4.0",
-    "url": "https://github.com/0xEvolex/evolex-repo/releases/download/companion-v0.4.0/SailorCompanion-Setup-0.4.0.exe",
-    "sha256": "88b9ecb2a8cf605d7fce8040b35c01a3131b7aec3a17bf5db3fcdee888cf54b0",
-    "size": 47149786,
-    "notes": "Sleep watches all your clients at once, each with its own alerts. Redesigned Events settings with a live overlay preview, a cleaner Hider and Sleep, a tidier tray menu, and no more notification when closing to the tray."
+    "version": "1.0.0",
+    "url": "https://github.com/0xEvolex/evolex-repo/releases/download/companion-v1.0.0/SailorCompanion-Setup-1.0.0.exe",
+    "sha256": "0d176455d3e1650b76f80d180d8d52897d722c38ccb8c75e2e05987b17b79515",
+    "size": 47137072,
+    "notes": "Sailor Companion 1.0. New look, a resizable window, keyboard focus rings, a first-run welcome, signed updates, crash logging and a support file. Pirate Odyssey now has a schedule. Events 3.3.0: the rewards preview lists every reward. Sleep 2.3.0: skips frozen clients, and its shutdown timer survives a Companion restart."
   },
   "modules": [
     {
