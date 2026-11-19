@@ -16,6 +16,9 @@ in separate repositories.
 | SRO Alchemist | 0.0.0.8 | Alchemy automation for Silkroad Online | [SRO Alchemist.exe](https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sro-alchemist/SRO%20Alchemist.exe) |
 | SRO Opus | 0.0.4.2 | Automation for Silkroad Online | [SRO Opus.exe](https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sro-opus/SRO%20Opus.exe) |
 
+Sailor Events, Sailor Fixer, SRO Hider and SRO Sleep are also modules of Sailor Companion. New players
+should install Companion; the standalone builds stay available.
+
 All applications run on Windows 10 and 11 (64-bit).
 
 ## Sailor Companion modules
