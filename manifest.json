@@ -74,14 +74,14 @@
   "Sailor Companion": {
     "product-name": "Sailor Companion",
     "file-description": "Sailor Companion - Hub for Evolex Silkroad tools",
-    "file-version": "0.2.0.0",
-    "product-version": "0.2.0.0",
+    "file-version": "0.4.0.0",
+    "product-version": "0.4.0.0",
     "company-name": "Evolex",
     "copyright": "© Evolex 2026",
     "trademarks": "Sailor Companion is a trademark of Evolex.",
-    "app_directory": "https://github.com/0xEvolex/evolex-repo/releases/tag/companion-v0.2.0",
+    "app_directory": "https://github.com/0xEvolex/evolex-repo/releases/tag/companion-v0.4.0",
     "app_download": "https://github.com/0xEvolex/evolex-repo/releases/latest/download/SailorCompanion-Setup.exe",
-    "sha256": "86a2944cd1bf5ff0678b21e3bbd5d5483a2d9172be4fd34ce76b46a9daf84117",
+    "sha256": "88b9ecb2a8cf605d7fce8040b35c01a3131b7aec3a17bf5db3fcdee888cf54b0",
     "notes": "Installs and updates Sailor Events, SRO Hider, SRO Sleep and Sailor Fixer from one place."
   }
 }
