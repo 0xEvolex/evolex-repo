@@ -13,17 +13,17 @@
       "name": "Sailor Events",
       "author": "Evolex",
       "description": "Event timers, spoken reminders and an in-game overlay for Arabian Dawn and Pirate Odyssey.",
-      "version": "3.1.0",
-      "url": "events-3.1.0.zip",
-      "sha256": "d559a901746ad2d0caad105fa204dc48178ef32a07eba80117602115e22b04d5",
-      "size": 845647,
-      "minHostVersion": "0.2.0",
+      "version": "3.2.0",
+      "url": "events-3.2.0.zip",
+      "sha256": "c58d27f023b0f7f443fa1d346510595e160d64979e81d9f577a6bc197673da89",
+      "size": 2547022,
+      "minHostVersion": "0.4.0",
       "requiresAdmin": false,
       "permissions": [
-        "Downloads the event schedule",
-        "Speaks reminders with Windows voices",
-        "Shows Windows notifications",
-        "Reads which window is in front to show the overlay only over the game"
+        "Countdowns for every event on both servers",
+        "Spoken reminders before the events you follow",
+        "Windows notifications",
+        "In-game overlay with your next events"
       ]
     },
     {
@@ -31,16 +31,15 @@
       "name": "SRO Hider",
       "author": "Evolex",
       "description": "Hide and show Silkroad clients without closing them, from Companion, the tray or Ctrl+Alt+H.",
-      "version": "2.0.1",
-      "url": "hider-2.0.1.zip",
-      "sha256": "d80672677097c189660a1934d399bebfaef80d052210fa8574bd03fb0c2f47ee",
-      "size": 13501,
-      "minHostVersion": "0.2.0",
+      "version": "2.1.0",
+      "url": "hider-2.1.0.zip",
+      "sha256": "7bb0da0a2d1d3bb0da4c59e682fe5eac26cd313de1e06f199cb61d57c2cd8169",
+      "size": 14117,
+      "minHostVersion": "0.4.0",
       "requiresAdmin": false,
       "permissions": [
-        "Lists running Silkroad clients",
-        "Hides and shows their windows",
-        "Optional global hotkey Ctrl+Alt+H"
+        "Hide and show your game clients",
+        "Optional hotkey Ctrl+Alt+H"
       ]
     },
     {
@@ -48,24 +47,24 @@
       "name": "SRO Sleep",
       "author": "Evolex",
       "description": "Wakes you with an alarm when the game disconnects, your character dies or the client crashes.",
-      "version": "2.1.0",
-      "url": "sleep-2.1.0.zip",
-      "sha256": "0b5b1f5dea99030639ae85cf5aadf02fb16d00f4961e354bd90a21015dac4fb0",
-      "size": 141541,
-      "minHostVersion": "0.2.0",
+      "version": "2.2.0",
+      "url": "sleep-2.2.0.zip",
+      "sha256": "111b76a72632895acf0df736537dc17d004fa6b17d580f003ef561bad539e1c3",
+      "size": 148109,
+      "minHostVersion": "0.4.0",
       "requiresAdmin": false,
       "permissions": [
-        "Looks at the game window every 3 seconds while watching (nothing is saved or sent)",
-        "If you minimize the watched client, keeps it running just off screen until you click it or stop watching",
-        "Plays a sound and shows Windows notifications",
-        "Can shut the PC down after a crash, only if you turn it on"
+        "Alarm when you disconnect, die or the client crashes",
+        "Keeps watching while the game is minimized",
+        "Your own alarm sound",
+        "Optional PC shutdown after a crash"
       ]
     },
     {
       "id": "fixer",
       "name": "Sailor Fixer",
       "author": "Evolex & Luminescence",
-      "description": "The Sailor Fixer repair tool. Companion downloads it and starts it in its own window.",
+      "description": "Fixes common Silkroad client problems in a few clicks.",
       "version": "2.1.0",
       "url": "fixer-2.1.0.zip",
       "sha256": "40e33268d074c432e6e944edb2c8a8cf4e580e0ee96d517dcafe602147eccf67",
