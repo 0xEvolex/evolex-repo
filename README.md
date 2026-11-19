@@ -8,6 +8,7 @@ in separate repositories.
 
 | Application | Version | Description | Download |
 | --- | --- | --- | --- |
+| Sailor Companion | latest | Hub that installs and updates Sailor Events, SRO Hider, SRO Sleep and Sailor Fixer | [SailorCompanion-Setup.exe](https://github.com/0xEvolex/evolex-repo/releases/latest/download/SailorCompanion-Setup.exe) |
 | Sailor Events | 2.5.0.0 | Event schedule and reminders for Sailor Online | [Sailor Events.exe](https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sailor-events/Sailor%20Events.exe) |
 | Sailor Fixer | 2.1.0.0 | Diagnostic and repair toolkit for the Sailor Online client and common Windows issues | [Sailor Fixer.exe](https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sailor-fixer/Sailor%20Fixer.exe) |
 | SRO Hider | 1.3.0.0 | Hides and restores Silkroad client windows | [SRO Hider.exe](https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sro-hider/SRO%20Hider.exe) |
@@ -27,12 +28,8 @@ against the SHA-256 listed in the catalog before installing it.
 rewards grouped by outcome or source (`events.<id>.rewards.win`, `.draw`, `.defeat`, `.kill`, ...)
 and structured requirements. The `format` block at the top of the file documents every field.
 
-| Module | Version | Package |
-| --- | --- | --- |
-| Sailor Events | 3.2.0 | `events-3.2.0.zip` |
-| SRO Hider | 2.1.0 | `hider-2.1.0.zip` |
-| SRO Sleep | 2.2.0 | `sleep-2.2.0.zip` |
-| Sailor Fixer | 2.1.0 | `fixer-2.1.0.zip` (the Sailor Fixer release above, unchanged) |
+Modules: Sailor Events, SRO Hider, SRO Sleep and Sailor Fixer (the Sailor Fixer release above, unchanged).
+`catalog.json` lists each module's current version and package (`<id>-<version>.zip`).
 
 Packages are installed through Sailor Companion; they are not meant to be unpacked by hand.
 
@@ -43,7 +40,7 @@ Packages are installed through Sailor Companion; they are not meant to be unpack
 | `manifest.json` | Name, version and download link of each application |
 | `sailor-events/` | Application and the event data it downloads (`events.json`, `sailor_ad_events.json`, `tooltips.yaml`) |
 | `sailor-fixer/` | Application, its configuration files and `latest_game_files/` used to restore missing client files |
-| `sailor-companion/` | Module catalog, packages and event data (`event-data.json`) for Sailor Companion |
+| `sailor-companion/` | Module catalog, packages and event data (`event-data.json`) for Sailor Companion; installers are GitHub releases (`companion-v<version>`) |
 | `sro-hider/`, `sro-sleep/`, `sro-alchemist/`, `sro-opus/` | Application builds |
 
 ## Security
