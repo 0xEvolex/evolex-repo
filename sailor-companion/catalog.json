@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "app": {
-    "version": "1.0.0",
-    "url": "https://github.com/0xEvolex/evolex-repo/releases/download/companion-v1.0.0/SailorCompanion-Setup-1.0.0.exe",
-    "sha256": "0d176455d3e1650b76f80d180d8d52897d722c38ccb8c75e2e05987b17b79515",
-    "size": 47137072,
-    "notes": "Sailor Companion 1.0. New look, a resizable window, keyboard focus rings, a first-run welcome, signed updates, crash logging and a support file. Pirate Odyssey now has a schedule. Events 3.3.0: the rewards preview lists every reward. Sleep 2.3.0: skips frozen clients, and its shutdown timer survives a Companion restart."
+    "version": "1.0.1",
+    "url": "https://github.com/0xEvolex/evolex-repo/releases/download/companion-v1.0.1/SailorCompanion-Setup-1.0.1.exe",
+    "sha256": "00784f4b3b102f49a88c340821e700143f222e9d04369010d25f384077dcdf5e",
+    "size": 47136741,
+    "notes": "Sailor Companion 1.0.1. Module settings (Hider, Sleep) now keep a backup copy and survive a power cut. Network paths are no longer accepted as a download source. Clearer message when a module cannot start."
   },
   "modules": [
     {
