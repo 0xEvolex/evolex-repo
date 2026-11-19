@@ -1421,6 +1421,33 @@
           }
         }
       }
+    },
+    "Sailor Online - Pirate Odyssey": {
+      "serverTimezone": "Etc/GMT-2",
+      "serverDelay": 0,
+      "serverName": "Sailor Online - Pirate Odyssey",
+      "serverEvents": {
+        "Test Event": {
+          "Dates": {
+            "Monday": ["20:00"],
+            "Tuesday": ["20:00"],
+            "Wednesday": ["20:00"],
+            "Thursday": ["20:00"],
+            "Friday": ["20:00"],
+            "Saturday": ["20:00"],
+            "Sunday": ["20:00"]
+          },
+          "duration": "00:10",
+          "registration_needed": false,
+          "pre_registration": "00:00",
+          "register_method": "",
+          "enabled": true,
+          "GUI_Location": {
+            "Side": "left",
+            "Order": 1
+          }
+        }
+      }
     }
   }
 }

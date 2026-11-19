@@ -536,6 +536,13 @@
       "rewardNotes": ["See the event page for the full list.", "All rewards except Avatar and Pet expire when the event ends (May 31st)."],
       "links": [{ "label": "Balloon Carnival event page", "url": "https://pe.sailor-online.com/en/knowledgebase/balloon-carnival-event" }],
       "requirements": { "register": "Carnival Manager Jooa", "notes": ["Speak to Jooa in any town during the event to get Balloons."] }
+    },
+    "test-event": {
+      "name": "Test Event",
+      "kind": "pve",
+      "summary": "Placeholder that tests the Pirate Odyssey schedule. Not a real game event.",
+      "description": ["Placeholder that tests the Pirate Odyssey schedule. Not a real game event."],
+      "rewards": {}
     }
   }
 }
