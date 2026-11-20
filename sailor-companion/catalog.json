@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "app": {
-    "version": "1.0.1",
-    "url": "https://github.com/0xEvolex/evolex-repo/releases/download/companion-v1.0.1/SailorCompanion-Setup-1.0.1.exe",
-    "sha256": "00784f4b3b102f49a88c340821e700143f222e9d04369010d25f384077dcdf5e",
-    "size": 47136741,
-    "notes": "Sailor Companion 1.0.1. Module settings (Hider, Sleep) now keep a backup copy and survive a power cut. Network paths are no longer accepted as a download source. Clearer message when a module cannot start."
+    "version": "1.0.2",
+    "url": "https://github.com/0xEvolex/evolex-repo/releases/download/companion-v1.0.2/SailorCompanion-Setup-1.0.2.exe",
+    "sha256": "3c42fbf2cdb3649b8d01d9c15aac8923c64cd15adc493ca705b6621cb5b097ec",
+    "size": 47133846,
+    "notes": "Overlay: milder header with faded art, opacity no longer fades the text, row markers removed. Overlay settings now have their own tab in Sailor Events (Events 3.4.0)."
   },
   "modules": [
     {
