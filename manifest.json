@@ -38,10 +38,10 @@
   "Sailor Fixer": {
     "product-name": "Sailor Fixer",
     "file-description": "Sailor Fixer - Fix common Windows issues!",
-    "file-version": "2.1.0.0",
-    "product-version": "2.1.0.0",
+    "file-version": "2.2.0.0",
+    "product-version": "2.2.0.0",
     "company-name": "Evolex & Luminescence",
-    "copyright": "© Evolex & Luminescence 2025",
+    "copyright": "© Evolex & Luminescence 2025-2026",
     "trademarks": "Sailor Fixer is a trademark of Evolex & Luminescence.",
     "app_directory": "https://github.com/0xEvolex/evolex-repo/tree/main/sailor-fixer",
     "app_download": "https://raw.githubusercontent.com/0xEvolex/evolex-repo/main/sailor-fixer/Sailor%20Fixer.exe",

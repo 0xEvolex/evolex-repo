@@ -8,5 +8,15 @@
     "Replacer.exe",
     "Silkroad.exe",
     "SRO_Client.exe"
-  ]
+  ],
+  "checksums": {
+    "Replacer.exe": {
+      "size": 3859392,
+      "sha256": "ae2b0c571ce9e0f3e790a2d6a1436712ad3f674a18540b27d34a30c3c8ebb60f"
+    },
+    "Silkroad.exe": {
+      "size": 4508608,
+      "sha256": "4216aa280e0cfe5f7ad29d27f6e5a6d3b70ce6d5608b290df0aec88fea53a7be"
+    }
+  }
 }
