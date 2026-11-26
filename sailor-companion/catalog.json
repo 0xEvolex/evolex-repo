@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "app": {
-    "version": "1.0.2",
-    "url": "https://github.com/0xEvolex/evolex-repo/releases/download/companion-v1.0.2/SailorCompanion-Setup-1.0.2.exe",
-    "sha256": "3c42fbf2cdb3649b8d01d9c15aac8923c64cd15adc493ca705b6621cb5b097ec",
-    "size": 47133846,
-    "notes": "Overlay: milder header with faded art, opacity no longer fades the text, row markers removed. Overlay settings now have their own tab in Sailor Events (Events 3.4.0)."
+    "version": "1.0.3",
+    "url": "https://github.com/0xEvolex/evolex-repo/releases/download/companion-v1.0.3/SailorCompanion-Setup-1.0.3.exe",
+    "sha256": "35be4b391955c5253e38419a039eabdd141c9d33fddb14400153c3bde3861fca",
+    "size": 47140715,
+    "notes": "Sailor Fixer 2.2.0 starts in managed mode: Companion handles its updates."
   },
   "modules": [
     {
